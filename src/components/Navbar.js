@@ -3,14 +3,16 @@ import logo from "../assets/logo.svg";
 import useStyles from "../styles/navbar-style";
 
 function Navbar() {
-  const { navbar, logoStyle, navLinks } = useStyles();
+  const { navbar, logoStyle, logoNav, navLinks } = useStyles();
   return (
     <nav className={navbar}>
-      <img
-        className={logoStyle}
-        src={logo}
-        alt="ilaria callegari front end developer logo"
-      ></img>
+      <NavLink to="/" className={logoNav}>
+        <img
+          className={logoStyle}
+          src={logo}
+          alt="ilaria callegari front end developer logo"
+        ></img>
+      </NavLink>
       <ul className={navLinks}>
         <li>
           <NavLink to="/">Home</NavLink>

@@ -35,9 +35,9 @@ a:hover {
   color: #95bab7;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1540px) {
   * {
-    font-size: 1.25rem; /*20px*/
+    font-size: 1.2rem; /*20px*/
   }
 }
 

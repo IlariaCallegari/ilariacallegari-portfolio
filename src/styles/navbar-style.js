@@ -2,16 +2,19 @@ import { createUseStyles } from "react-jss";
 
 const useStyles = createUseStyles({
   navbar: {
-    height: "6rem",
     width: "80%",
     margin: "0 auto",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
   },
-  logoStyle: {
-    height: "4rem",
+  logoNav: {
     width: "15%",
+    height: "100%"
+  },
+  logoStyle: {
+    width: "100%",
+    height: "auto"
   },
   navLinks: {
     display: "flex",
