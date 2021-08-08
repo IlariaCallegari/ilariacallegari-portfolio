@@ -1,12 +1,10 @@
 import { createUseStyles } from "react-jss";
 
 const useStyles = createUseStyles({
-  navbar: {
-    width: "80%",
-    margin: "0 auto",
+  menuList: {
     display: "flex",
     justifyContent: "space-between",
-    alignItems: "center",
+    width: "20%",
   },
 });
 

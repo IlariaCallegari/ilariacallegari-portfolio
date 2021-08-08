@@ -1,9 +1,13 @@
 import { createUseStyles } from "react-jss";
 
 const useStyles = createUseStyles({
-  general: {
-    width: "80%",
-    margin: "2rem auto 0 auto",
+  logoNav: {
+    width: "15%",
+    height: "100%",
+  },
+  logoStyle: {
+    width: "100%",
+    height: "auto",
   },
 });
 

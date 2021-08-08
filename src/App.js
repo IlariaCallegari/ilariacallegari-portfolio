@@ -5,6 +5,7 @@ import Page from "./pages/Page";
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             </Page>
           </Route>
         </Switch>
+        <Footer />
       </div>
     </Router>
   );
