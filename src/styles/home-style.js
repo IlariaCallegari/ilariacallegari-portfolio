@@ -2,11 +2,13 @@ import { createUseStyles } from "react-jss";
 import colors from "../utils/colors.js";
 
 const useStyles = createUseStyles({
-  heroCtn: {
+  heroCtn: (inView) => ({
     width: "100%",
     position: "relative",
     textAlign: "center",
-  },
+    opacity: 0,
+    animation: inView && "$fade-in 0.7s ease-in forwards",
+  }),
   heroImg: {
     width: "inherit",
   },
@@ -33,32 +35,17 @@ const useStyles = createUseStyles({
       background: colors.secondaryPink,
       padding: "1rem 2rem",
       textTransform: "uppercase",
+      cursor: "pointer",
       transition: "all 0.3s ease-in",
-      "& span": {
-        display: "inline-block",
-        marginRight: "1rem",
-      },
+      color: "#fff",
       "&:hover": {
-        color: "#fff",
+        background: colors.primaryDarkGreen,
       },
     },
   },
-  aboutCtn: {
-    marginTop: "10rem",
-    display: "flex",
-  },
-  aboutDescrCtn: {
-    margin: "0 10rem",
-    borderTop: `2px solid ${colors.lightGrey}`,
-    borderBottom: `2px solid ${colors.lightGrey}`,
-    paddingBottom: "2.5rem",
-    "& h2": {
-      marginTop: "2.5rem",
-      fontSize: "2.5rem",
-      fontWeight: 200,
-    },
-    "& p": {
-      marginBottom: "2rem",
+  "@keyframes fade-in": {
+    "100%": {
+      opacity: 1,
     },
   },
 });

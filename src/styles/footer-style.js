@@ -12,7 +12,8 @@ const useStyles = createUseStyles({
   link: {
     fontSize: "2rem",
     marginRight: "1rem",
-  }
+    color: "#fff"
+  },
 });
 
 export default useStyles;

@@ -1,10 +1,12 @@
+import { useInView } from "react-intersection-observer";
 import useStyles from "../styles/callToAction-style";
 import Button from "./Button";
 
 function CallToAction() {
-  const { callToAction, ctaHeading } = useStyles();
+  const [ref, inView] = useInView();
+  const { callToAction, ctaHeading } = useStyles(inView);
   return (
-    <div className={callToAction}>
+    <div ref={ref} className={callToAction}>
       <h3 className={ctaHeading}>
         Would you like to collaborate on a project?
       </h3>

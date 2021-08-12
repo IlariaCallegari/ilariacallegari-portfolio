@@ -1,17 +1,17 @@
 import React from "react";
-import useStyles from "../styles/home-style";
+import { useInView } from "react-intersection-observer";
+import { Link } from "react-scroll";
 import mainImage from "../assets/main-img.svg";
-import aboutImg from "../assets/about-img.jpg";
-import { BsChevronDoubleDown } from "react-icons/bs";
+import About from "../components/About";
 import CallToAction from "../components/CallToAction";
-import Button from "../components/Button";
+import useStyles from "../styles/home-style";
 
 function Home() {
-  const { heroCtn, heroImg, heroHeading, aboutCtn, aboutDescrCtn } =
-    useStyles();
+  const [ref, inView] = useInView();
+  const { heroCtn, heroImg, heroHeading } = useStyles(inView);
   return (
     <React.Fragment>
-      <div className={heroCtn}>
+      <div className={heroCtn} ref={ref}>
         <img
           className={heroImg}
           src={mainImage}
@@ -19,31 +19,12 @@ function Home() {
         />
         <div className={heroHeading}>
           <h1>Hi, I am Ilaria, your next Front End Developer</h1>
-          <a href="#about">
-            <span>
-              <BsChevronDoubleDown />
-            </span>
+          <Link to="about" smooth={true}>
             About Me
-          </a>
+          </Link>
         </div>
       </div>
-      <div className={aboutCtn}>
-        <img src={aboutImg} alt="Ilaria Callegari" />
-        <div className={aboutDescrCtn}>
-          <h2 id="about">About Me</h2>
-          <p>
-            Freelance Web Developer looking to join a joyful team as a Front End
-            Developer to work for a good cause. I invested the past year to
-            retrain as a web developer, focussing my learning efforts on
-            studying the MERN stack. I chose React.js as my front-end framework
-            of choice, for its ability to create smooth user experiences by
-            writing easy-to-read and easily scalable code. Creating harmonious
-            and intuitive user experiences is my main goal, and I go the extra
-            mile to make my projects work well responsively.
-          </p>
-          <Button text="Go to portfolio" link="/portfolio" />
-        </div>
-      </div>
+      <About />
       <CallToAction />
     </React.Fragment>
   );
