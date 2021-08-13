@@ -12,6 +12,7 @@ function useForm(options) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    //validation
     const validations = options?.validations;
     if (validations) {
       let valid = true;
@@ -19,17 +20,14 @@ function useForm(options) {
       for (const key in validations) {
         const value = data[key];
         const validation = validations[key];
-        // //REQUIRED VALUE
-        // if (validation?.required?.value && !value) {
-        //   valid = false;
-        //   newErrors[key] = validation?.required?.message;
-        // }
+
         //PATTERN
         const pattern = validation?.pattern;
         if (pattern?.value && RegExp(pattern.value).test(value)) {
           valid = false;
           newErrors[key] = pattern.message;
         }
+
         //COSTUM
         const custom = validation?.custom;
         if (custom?.isEmailValid && !custom.isEmailValid(value)) {
@@ -44,9 +42,31 @@ function useForm(options) {
       }
       setErrors({});
     }
-    if (options?.onSubmit) {
-      options.onSubmit();
-    }
+
+    const response = await fetch("http://localhost:5000/send", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify({ data }),
+    })
+      .then((res) => res.json())
+      .then(async (res) => {
+        const resData = await res;
+        console.log(resData);
+        if (resData.status === "success") {
+          alert("Message Sent");
+        } else if (resData.status === "fail") {
+          alert("Message failed to send");
+        }
+      })
+      .then(() => {
+        setData({
+          name: "",
+          email: "",
+          message: "",
+        });
+      });
   };
 
   return {

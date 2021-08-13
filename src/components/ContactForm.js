@@ -36,7 +36,6 @@ function ContactForm() {
         },
       },
     },
-    onSubmit: () => alert("User submitted!"),
   });
   return (
     <div className={contactFormCtn} ref={ref}>
@@ -82,6 +81,7 @@ function ContactForm() {
             placeholder="How can I help you?"
             required
             onChange={handleChange("message")}
+            value={data.message || ""}
           />
           <button className={formBtn} type="submit">
             Send Message
