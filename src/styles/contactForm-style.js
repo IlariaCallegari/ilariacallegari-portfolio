@@ -7,7 +7,7 @@ const useStyles = createUseStyles({
     marginTop: "3rem",
     marginBottom: "3rem",
     opacity: 0,
-    animation: inView && "$fade-in 0.7s ease-in forwards"
+    animation: inView && "$fade-in 0.7s ease-in forwards",
   }),
   headingCtn: {
     width: "40%",
@@ -52,25 +52,30 @@ const useStyles = createUseStyles({
     },
   },
   formBtn: {
-      padding: "1rem 2rem",
-      border: "none",
-      fontFamily: "inherit",
-      fontSize: "1rem",
-      textTransform: "uppercase",
-      width: "30%",
-      background: colors.secondaryPink,
-      color: "#fff",
-      cursor: "pointer",
-      transition: "all 0.3s ease-in",
-      "&:hover": {
-          background: colors.primaryDarkGreen,
-      }
+    padding: "1rem 2rem",
+    border: "none",
+    fontFamily: "inherit",
+    fontSize: "1rem",
+    textTransform: "uppercase",
+    width: "30%",
+    background: colors.secondaryPink,
+    color: "#fff",
+    cursor: "pointer",
+    transition: "all 0.3s ease-in",
+    "&:hover": {
+      background: colors.primaryDarkGreen,
+    },
+  },
+  errorStyle: {
+    fontSize: "0.8rem",
+    color: "red",
+    marginTop: "-1rem",
   },
   "@keyframes fade-in": {
-      "100%": {
-          opacity: 1,
-      }
-  }
+    "100%": {
+      opacity: 1,
+    },
+  },
 });
 
 export default useStyles;

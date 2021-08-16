@@ -1,12 +1,14 @@
 import { useState } from "react";
+import useFetch from "./useFetch";
 
 function useForm(options) {
   const [data, setData] = useState(options?.initialValues || {});
+  const {fetchRoute} = useFetch();
   const [errors, setErrors] = useState({});
 
-  const handleChange = (key, sanitizeFn) => (e) => {
+  const handleChange = (key) => (e) => {
     //curried function
-    const value = sanitizeFn ? sanitizeFn(e.target.value) : e.target.value;
+    const value = e.target.value;
     setData({ ...data, [key]: value });
   };
 
@@ -43,34 +45,43 @@ function useForm(options) {
       setErrors({});
     }
 
-    const response = await fetch("http://localhost:5000/send", {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify({ data }),
-    })
-      .then((res) => res.json())
-      .then(async (res) => {
-        const resData = await res;
-        console.log(resData);
-        if (resData.status === "success") {
-          alert("Message Sent");
-        } else if (resData.status === "fail") {
-          alert("Message failed to send");
-        }
-      })
-      .then(() => {
-        setData({
-          name: "",
-          email: "",
-          message: "",
-        });
+    await fetchRoute(data).then(() => {
+      setData({
+        name: "",
+        email: "",
+        message: "",
       });
+    });
+
+  //   const response = await fetch("http://localhost:5000/send", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-type": "application/json",
+  //     },
+  //     body: JSON.stringify({ data }),
+  //   })
+  //     .then((res) => res.json())
+  //     .then(async (res) => {
+  //       const resData = await res;
+  //       console.log(resData);
+  //       if (resData.status === "success") {
+  //         alert("Message Sent");
+  //       } else if (resData.status === "fail") {
+  //         alert("Message failed to send");
+  //       }
+  //     })
+  //     .then(() => {
+  //       setData({
+  //         name: "",
+  //         email: "",
+  //         message: "",
+  //       });
+  //     });
   };
 
   return {
     data,
+    setData,
     handleChange,
     handleSubmit,
     errors,

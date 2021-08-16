@@ -14,6 +14,7 @@ function ContactForm() {
     input,
     textArea,
     formBtn,
+    errorStyle
   } = useStyles(inView);
   const { handleSubmit, handleChange, data, errors } = useForm({
     initialValues: {
@@ -57,7 +58,7 @@ function ContactForm() {
             onChange={handleChange("name")}
             required
           />
-          {errors.name && <p>{errors.name}</p>}
+          {errors.name && <p className={errorStyle}>{errors.name}</p>}
           <label className={label} htmlFor="email">
             Email Address
           </label>
@@ -71,7 +72,7 @@ function ContactForm() {
             onChange={handleChange("email")}
             required
           />
-          {errors.email && <p>{errors.email}</p>}
+          {errors.email && <p className={errorStyle}>{errors.email}</p>}
           <label className={label} htmlFor="message">
             Message
           </label>
