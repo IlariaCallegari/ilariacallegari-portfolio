@@ -3,8 +3,9 @@ import useFetch from "./useFetch";
 
 function useForm(options) {
   const [data, setData] = useState(options?.initialValues || {});
-  const {fetchRoute} = useFetch();
   const [errors, setErrors] = useState({});
+  const [resStatus, setResStatus] = useState("");
+  const { fetchRoute } = useFetch();
 
   const handleChange = (key) => (e) => {
     //curried function
@@ -12,7 +13,7 @@ function useForm(options) {
     setData({ ...data, [key]: value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     //validation
     const validations = options?.validations;
@@ -45,42 +46,27 @@ function useForm(options) {
       setErrors({});
     }
 
-    await fetchRoute(data).then(() => {
-      setData({
-        name: "",
-        email: "",
-        message: "",
+    fetchRoute(data)
+      .then((res) => {
+        if (res.status === "success") {
+          setResStatus("success");
+          console.log(resStatus);
+        } else if (res.status === "fail") {
+          setResStatus("fail");
+        }
+      })
+      .then(() => {
+        setData({
+          name: "",
+          email: "",
+          message: "",
+        });
       });
-    });
-
-  //   const response = await fetch("http://localhost:5000/send", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-type": "application/json",
-  //     },
-  //     body: JSON.stringify({ data }),
-  //   })
-  //     .then((res) => res.json())
-  //     .then(async (res) => {
-  //       const resData = await res;
-  //       console.log(resData);
-  //       if (resData.status === "success") {
-  //         alert("Message Sent");
-  //       } else if (resData.status === "fail") {
-  //         alert("Message failed to send");
-  //       }
-  //     })
-  //     .then(() => {
-  //       setData({
-  //         name: "",
-  //         email: "",
-  //         message: "",
-  //       });
-  //     });
   };
 
   return {
     data,
+    resStatus,
     setData,
     handleChange,
     handleSubmit,
