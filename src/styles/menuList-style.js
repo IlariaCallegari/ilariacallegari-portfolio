@@ -4,7 +4,7 @@ const useStyles = createUseStyles({
   menuList: {
     display: "flex",
     justifyContent: "space-between",
-    width: "20%",
+    width: "30%",
   },
 });
 

@@ -21,6 +21,12 @@ const useStyles = createUseStyles({
   },
   descriptionCtn: {
     width: "60%",
+    "& h3": {
+      marginBottom: "1.5rem",
+    },
+    "& h3:nth-of-type(2)": {
+      marginTop: "1.5rem"
+    }
   },
   linkCtn: {
     marginTop: "3rem",

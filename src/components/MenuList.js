@@ -6,6 +6,9 @@ function MenuList() {
   return (
     <ul className={menuList}>
       <li>
+        <NavLink to="/">Home</NavLink>
+      </li>
+      <li>
         <NavLink to="/portfolio">Portfolio</NavLink>
       </li>
       <li>

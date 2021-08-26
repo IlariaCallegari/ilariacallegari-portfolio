@@ -15,6 +15,7 @@ const useStyles = createUseStyles({
     paddingBottom: "2.5rem",
     "& h2": {
       marginTop: "2.5rem",
+      marginBottom: "1.5rem",
       fontSize: "2.5rem",
       fontWeight: 200,
     },

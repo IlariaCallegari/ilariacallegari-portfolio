@@ -2,6 +2,7 @@ import Logo from "../components/Logo";
 import MenuList from "./MenuList";
 import useStyles from "../styles/footer-style";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { SiFiverr } from "react-icons/si";
 
 function Footer() {
   const { footer, link } = useStyles();
@@ -25,6 +26,14 @@ function Footer() {
           href="https://www.linkedin.com/in/ilariacallegari/"
         >
           <FaLinkedin />
+        </a>
+        <a
+          className={link}
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.fiverr.com/ilariacallegari/create-a-responsive-and-modern-website-for-your-business"
+        >
+          <SiFiverr />
         </a>
       </div>
     </div>
