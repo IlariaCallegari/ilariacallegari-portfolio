@@ -8,6 +8,10 @@ const useStyles = createUseStyles({
     opacity: 0,
     animation: inView && "$fade-in 0.7s ease-in forwards",
   }),
+  img: {
+    width: "35%",
+    height: "auto"
+  }, 
   aboutDescrCtn: {
     margin: "0 10rem",
     borderTop: `2px solid ${colors.lightGrey}`,

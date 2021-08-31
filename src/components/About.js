@@ -1,15 +1,15 @@
 import React from "react";
 import { useInView } from "react-intersection-observer";
-import aboutImg from "../assets/about-img.jpg";
-import Button from "../components/Button";
+import aboutImg from "../assets/about-me-pic.png";
+import {Button} from "../components/Buttons";
 import useStyles from "../styles/about-style";
 
 function Home() {
   const [ref, inView] = useInView();
-  const { aboutCtn, aboutDescrCtn } = useStyles(inView);
+  const { aboutCtn, img, aboutDescrCtn } = useStyles(inView);
   return (
     <div className={aboutCtn} ref={ref}>
-      <img src={aboutImg} alt="Ilaria Callegari" />
+      <img className={img} src={aboutImg} alt="Ilaria Callegari" />
       <div className={aboutDescrCtn}>
         <h2 id="about">About Me</h2>
         <p>

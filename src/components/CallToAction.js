@@ -1,6 +1,6 @@
 import { useInView } from "react-intersection-observer";
 import useStyles from "../styles/callToAction-style";
-import Button from "./Button";
+import {Button} from "./Buttons";
 
 function CallToAction() {
   const [ref, inView] = useInView();

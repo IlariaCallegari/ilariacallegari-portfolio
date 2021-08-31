@@ -5,6 +5,7 @@ import Page from "./pages/Page";
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
+import Project from "./pages/Project";
 import Footer from "./components/Footer";
 
 function App() {
@@ -26,6 +27,11 @@ function App() {
           <Route exact path="/contact-me">
             <Page>
               <Contact />
+            </Page>
+          </Route>
+          <Route exact path="/portfolio/peace-and-love-within">
+            <Page>
+              <Project />
             </Page>
           </Route>
         </Switch>

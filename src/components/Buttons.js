@@ -10,4 +10,13 @@ function Button({ text, link }) {
   );
 }
 
-export default Button;
+function ExternalLink({ text, link }) {
+  const { btn } = useStyles();
+  return (
+    <a className={btn} target="_blank" rel="noreferrer" href={link}>
+      {text}
+    </a>
+  );
+}
+
+export {Button, ExternalLink};

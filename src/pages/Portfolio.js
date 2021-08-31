@@ -1,7 +1,7 @@
 import useStyles from "../styles/portfolio-style";
 import CallToAction from "../components/CallToAction";
-import Button from "../components/Button";
-import ImgPeaceAndLoveWithin from "../assets/Desktop - Portfolio Main Images/Project 1.png";
+import { Button } from "../components/Buttons";
+import ImgPeaceAndLoveWithin from "../assets/desktop/Project-1-PortfolioPage-MainImg.png";
 
 function Portfolio() {
   const { projectCtn, imgCtn, projectImg, projectDescr, projectHeading } =
@@ -19,7 +19,10 @@ function Portfolio() {
             created with WordPress. It integrates an event calendar, a Stripe
             gateway payment, and a booking system.
           </p>
-          <Button text="view project" link="/portfolio/peace-and-love-within/"/>
+          <Button
+            text="view project"
+            link="/portfolio/peace-and-love-within/"
+          />
         </div>
       </div>
       <CallToAction />
