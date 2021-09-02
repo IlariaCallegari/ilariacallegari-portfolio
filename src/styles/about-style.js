@@ -10,8 +10,8 @@ const useStyles = createUseStyles({
   }),
   img: {
     width: "35%",
-    height: "auto"
-  }, 
+    height: "auto",
+  },
   aboutDescrCtn: {
     margin: "0 10rem",
     borderTop: `2px solid ${colors.lightGrey}`,

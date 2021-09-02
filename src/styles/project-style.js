@@ -1,61 +1,66 @@
 import { createUseStyles } from "react-jss";
-import colors from "../utils/colors"
+import colors from "../utils/colors";
 
 const useStyles = createUseStyles({
   projectCtn: {
-   display: "flex",
-   justifyContent: "center",
-   flexDirection: "column"
+    display: "flex",
+    justifyContent: "center",
+    flexDirection: "column",
   },
-  projectDescr: {
-      display: "flex",
-      alignItems: "flex-start",
-  },
-  shortDescr:{
+  img: (inView) => ({
+    animation: inView && "$fade-in 0.7s ease-in forwards",
+    opacity: 0,
+  }),
+  leftSide: {
     width: "50%",
-    margin: "7rem 10rem 5rem 0",
-    paddingBottom: "5rem",
+  },
+  projectDescr: (inView1) => ({
+    display: "flex",
+    alignItems: "flex-start",
+    opacity: 0,
+    animation: inView1 && "$fade-in 0.7s ease-in forwards",
+  }),
+  shortDescr: {
+    margin: "7rem 10rem 0 0",
     borderTop: `2px solid ${colors.lightGrey}`,
-    borderBottom: `2px solid ${colors.lightGrey}`,
     "& h3": {
       marginTop: "3rem",
-      marginBottom: "2rem",
-      fontSize: "2rem",
-      fontWeight: 300
     },
     "& p": {
-      marginBottom: "3rem"
-    }
+      marginBottom: "3rem",
+    },
   },
   stack: {
-    marginBottom: "3rem"
+    marginBottom: "3rem",
   },
-  projectBg:{
+  lessons: {
+    margin: "5rem 10rem 5rem 0",
+    borderBottom: `2px solid ${colors.lightGrey}`,
+    paddingBottom: "3rem",
+  },
+  projectBg: {
     marginTop: "7rem",
     width: "50%",
     "& h3": {
       fontSize: "1.5rem",
-      fontWeight: 300,
-      marginBottom: "2rem"
     },
     "& p": {
-      marginBottom: "5rem"
-    }
+      marginBottom: "5rem",
+    },
   },
-  staticPreviewCtn:{
+  staticPreviewCtn: {
     width: "100%",
-    "& h3": {
-      fontSize: "1.5rem",
-      fontWeight: 300,
-      marginBottom: "2rem"
-    }, 
     "& img": {
       width: "100%",
       marginBottom: "4rem",
       boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
-    }
-  }
-
+    },
+  },
+  "@keyframes fade-in": {
+    "100%": {
+      opacity: 1,
+    },
+  },
 });
 
 export default useStyles;

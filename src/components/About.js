@@ -1,4 +1,3 @@
-import React from "react";
 import { useInView } from "react-intersection-observer";
 import aboutImg from "../assets/about-me-pic.png";
 import {Button} from "../components/Buttons";

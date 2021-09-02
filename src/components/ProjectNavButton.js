@@ -1,11 +1,13 @@
+import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import useStyles from "../styles/projectNavButton-style.js";
 
 function ProjectNavButton() {
-  const { navButtonCtn, btnLeft, btnRight } = useStyles();
+    const [ref, inView] = useInView();
+  const { navButtonCtn, btnLeft, btnRight } = useStyles({inView});
   return (
-    <div className={navButtonCtn}>
+    <div className={navButtonCtn} ref={ref}>
       <div className={btnLeft}>
         <BsChevronLeft />
         <div>

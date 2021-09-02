@@ -2,12 +2,14 @@ import { createUseStyles } from "react-jss";
 import colors from "../utils/colors.js";
 
 const useStyles = createUseStyles({
-  navButtonCtn: {
+  navButtonCtn: (inView) => ({
     display: "flex",
     justifyContent: "space-between",
     borderTop: `2px solid ${colors.lightGrey}`,
+    opacity: 0,
     borderBottom: `2px solid ${colors.lightGrey}`,
-  },
+    animation: inView && "$fade-in 0.7s ease-in forwards",
+  }),
   btnLeft: {
     width: "50%",
     display: "flex",
@@ -18,6 +20,9 @@ const useStyles = createUseStyles({
       "& a": {
         fontSize: "1.2rem",
         fontWeight: 400,
+      },
+      "& p": {
+        fontSize: "0.9rem",
       },
     },
   },
@@ -32,6 +37,14 @@ const useStyles = createUseStyles({
         fontSize: "1.2rem",
         fontWeight: 400,
       },
+      "& p": {
+        fontSize: "0.9rem",
+      },
+    },
+  },
+  "@keyframes fade-in": {
+    "100%": {
+      opacity: 1,
     },
   },
 });

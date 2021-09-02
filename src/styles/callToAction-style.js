@@ -7,6 +7,7 @@ const useStyles = createUseStyles({
     marginBottom: "7rem",
     display: "flex",
     alignItems: "center",
+    justifyContent: "space-between",
     opacity: 0,
     animation: inView && "$fade-in 0.7s ease-in forwards",
     "& span": {

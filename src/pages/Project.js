@@ -1,48 +1,54 @@
 import useStyles from "../styles/project-style.js";
-import mainImg from "../assets/desktop/Project-1-SingleProject-MainImg.png";
+import { useInView } from "react-intersection-observer";
 import staticImgOne from "../assets/desktop/Project-1-PortfolioPage-MainImg.png";
 import staticImgTwo from "../assets/desktop/Project-1-SingleProject-MobileDisplay.png";
+import ProjectMainImg from "../components/ProjectMainImg.js";
 import { ExternalLink } from "../components/Buttons";
-import { SiWordpress, SiStripe } from "react-icons/si";
 import ProjectNavButton from "../components/ProjectNavButton.js";
 import CallToAction from "../components/CallToAction.js";
 
-function Project() {
+function Project({ myProject }) {
+  const [ref1, inView1] = useInView();
   const {
     projectCtn,
+    leftSide,
     projectDescr,
     shortDescr,
     projectBg,
     stack,
+    lessons,
     staticPreviewCtn,
-  } = useStyles();
+  } = useStyles({ inView1 });
+
   return (
     <div className={projectCtn}>
-      <img src={mainImg} alt="single project" />
-      <article className={projectDescr}>
-        <div className={shortDescr}>
-          <h3>Peace and Love Within</h3>
-          <p>
-            This project was developed for a client. It's an e-commerce website,
-            created with WordPress. It integrates an event calendar, a Stripe
-            gateway payment, and a booking system.
-          </p>
-          <div className={stack}>
-            <SiWordpress />
-            <SiStripe />
+      <ProjectMainImg project={myProject.project} />
+      <article className={projectDescr} ref={ref1}>
+        <div className={leftSide}>
+          <div className={shortDescr}>
+            <h3>{myProject.projectName}</h3>
+            <p>{myProject.shortDescription}</p>
+            <div>
+              <h3>Built with</h3>
+              <ul className={stack}>
+                {myProject.stack.map((skill) => (
+                  <li>{skill}</li>
+                ))}
+              </ul>
+            </div>
+            <ExternalLink text="visit website" link={myProject.link} />
+            {myProject.code ? (
+              <ExternalLink text="visit code" link={myProject.code} />
+            ) : null}
           </div>
-          <ExternalLink
-            text="visit website"
-            link="https://peaceandlovewithin.com"
-          />
+          <div className={lessons}>
+            <h3>Key Lessons</h3>
+            <p dangerouslySetInnerHTML={{ __html: myProject.keyLessons }}></p>
+          </div>
         </div>
         <div className={projectBg}>
           <h3>Project Background</h3>
-          <p>
-            This project was developed for a client. It's an e-commerce website,
-            created with WordPress. It integrates an event calendar, a Stripe
-            gateway payment, and a booking system.
-          </p>
+          <p>{myProject.projectBackground}</p>
           <div className={staticPreviewCtn}>
             <h3>Static Preview</h3>
             <img src={staticImgOne} alt="static preview of website P&LW" />

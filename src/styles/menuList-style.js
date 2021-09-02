@@ -5,6 +5,10 @@ const useStyles = createUseStyles({
     display: "flex",
     justifyContent: "space-between",
     width: "30%",
+    "& li": {
+      listStyleType: "none",
+      textTransform: "uppercase",
+    }
   },
 });
 

@@ -1,14 +1,16 @@
 import useStyles from "../styles/portfolio-style";
+import { useInView } from "react-intersection-observer";
 import CallToAction from "../components/CallToAction";
 import { Button } from "../components/Buttons";
 import ImgPeaceAndLoveWithin from "../assets/desktop/Project-1-PortfolioPage-MainImg.png";
 
 function Portfolio() {
+  const [ref, inView] = useInView();
   const { projectCtn, imgCtn, projectImg, projectDescr, projectHeading } =
-    useStyles();
+    useStyles(inView);
   return (
-    <div>
-      <div className={projectCtn}>
+    <>
+      <div className={projectCtn} ref={ref}>
         <div className={imgCtn}>
           <img className={projectImg} src={ImgPeaceAndLoveWithin} alt="" />
         </div>
@@ -26,7 +28,7 @@ function Portfolio() {
         </div>
       </div>
       <CallToAction />
-    </div>
+    </>
   );
 }
 

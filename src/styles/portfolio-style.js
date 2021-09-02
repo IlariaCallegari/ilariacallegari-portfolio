@@ -2,11 +2,13 @@ import { createUseStyles } from "react-jss";
 import colors from "../utils/colors";
 
 const useStyles = createUseStyles({
-  projectCtn: {
+  projectCtn: (inView) => ({
     display: "flex",
     width: "100%",
     marginTop: "3rem",
-  },
+    opacity: 0,
+    animation: inView && "$fade-in 0.7s ease-in forwards",
+  }),
   imgCtn: {
     width: "50%",
   },
@@ -30,6 +32,11 @@ const useStyles = createUseStyles({
     "& p": {
         marginBottom: "2.5rem"
     }
+  },
+  "@keyframes fade-in": {
+    "100%": {
+      opacity: 1,
+    },
   },
 });
 
