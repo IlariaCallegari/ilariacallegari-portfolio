@@ -1,11 +1,13 @@
 import useStyles from "../styles/project-style.js";
 import { useInView } from "react-intersection-observer";
-import staticImgOne from "../assets/desktop/Project-1-PortfolioPage-MainImg.png";
-import staticImgTwo from "../assets/desktop/Project-1-SingleProject-MobileDisplay.png";
 import ProjectMainImg from "../components/ProjectMainImg.js";
 import { ExternalLink } from "../components/Buttons";
 import ProjectNavButton from "../components/ProjectNavButton.js";
 import CallToAction from "../components/CallToAction.js";
+import {
+  StaticPreviewOne,
+  StaticPreviewTwo,
+} from "../components/StaticPreviewImgs.js";
 
 function Project({ myProject }) {
   const [ref1, inView1] = useInView();
@@ -26,7 +28,7 @@ function Project({ myProject }) {
       <article className={projectDescr} ref={ref1}>
         <div className={leftSide}>
           <div className={shortDescr}>
-            <h3>{myProject.projectName}</h3>
+            <h2>{myProject.projectName}</h2>
             <p>{myProject.shortDescription}</p>
             <div>
               <h3>Built with</h3>
@@ -51,8 +53,8 @@ function Project({ myProject }) {
           <p>{myProject.projectBackground}</p>
           <div className={staticPreviewCtn}>
             <h3>Static Preview</h3>
-            <img src={staticImgOne} alt="static preview of website P&LW" />
-            <img src={staticImgTwo} alt="static preview of website P&LW" />
+            <StaticPreviewOne project={myProject.project} />
+            <StaticPreviewTwo project={myProject.project} />
           </div>
         </div>
       </article>

@@ -10,6 +10,8 @@ const useStyles = createUseStyles({
   img: (inView) => ({
     animation: inView && "$fade-in 0.7s ease-in forwards",
     opacity: 0,
+    width: "100%",
+    height: "auto",
   }),
   leftSide: {
     width: "50%",
@@ -23,6 +25,12 @@ const useStyles = createUseStyles({
   shortDescr: {
     margin: "7rem 10rem 0 0",
     borderTop: `2px solid ${colors.lightGrey}`,
+    "& h2": {
+      fontSize: "2.5rem",
+      fontWeight: 200,
+      marginBottom: "2rem",
+      marginTop: "3rem",
+    },
     "& h3": {
       marginTop: "3rem",
     },
@@ -41,9 +49,6 @@ const useStyles = createUseStyles({
   projectBg: {
     marginTop: "7rem",
     width: "50%",
-    "& h3": {
-      fontSize: "1.5rem",
-    },
     "& p": {
       marginBottom: "5rem",
     },

@@ -13,17 +13,14 @@ function ProjectMainImg({ project }) {
 
   const findImage = () => {
     if (project === "peace-and-love-within") {
-        myImg = ProjOneMainImg;
-        console.log(myImg)
-    } else if (project === "github-dev-app") {
+      myImg = ProjOneMainImg;
+    } else if (project === "dev-job-app") {
       myImg = ProjTwoMainImg;
     }
     return myImg;
   };
 
-  return (
-    <img className={img} src={findImage()} alt={`${project}`} ref={ref} />
-  );
+  return <img className={img} src={findImage()} alt={`${project}`} ref={ref} />;
 }
 
 export default ProjectMainImg;

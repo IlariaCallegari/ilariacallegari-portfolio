@@ -8,6 +8,7 @@ const useStyles = createUseStyles({
     padding: "1rem 2rem",
     display: "inline-block",
     transition: "all 0.3s ease-in",
+    marginRight: "1rem",
     "&:hover": {
       background: colors.primaryGreen,
       border: `1px solid ${colors.primaryGreen}`,

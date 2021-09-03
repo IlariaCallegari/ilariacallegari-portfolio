@@ -24,14 +24,14 @@ const useStyles = createUseStyles({
     marginRight: "10%",
     padding: "2.5rem 0",
     "& h2": {
-        fontSize: "2.5rem",
-        fontWeight: 200,
-        lineHeight: "3rem",
-        marginBottom: "2rem",
+      fontSize: "2.5rem",
+      fontWeight: 200,
+      lineHeight: "3rem",
+      marginBottom: "2rem",
     },
     "& p": {
-        marginBottom: "2.5rem"
-    }
+      marginBottom: "2.5rem",
+    },
   },
   "@keyframes fade-in": {
     "100%": {
