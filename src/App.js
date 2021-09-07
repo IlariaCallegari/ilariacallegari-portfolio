@@ -12,6 +12,7 @@ import projects from "./projects";
 
 function App() {
   const [allProjects] = useState([...projects]);
+  
   const findProject = (project) => {
     return allProjects.find((p) => p.project === project);
   };
@@ -28,7 +29,7 @@ function App() {
           </Route>
           <Route exact path="/portfolio">
             <Page>
-              <Portfolio />
+              <Portfolio allProjects={allProjects} />
             </Page>
           </Route>
           <Route exact path="/contact-me">

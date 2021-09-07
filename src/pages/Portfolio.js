@@ -1,11 +1,10 @@
 import CallToAction from "../components/CallToAction";
 import ProjectPreview from "../components/ProjectPreview";
-import projects from "../projects.js";
 
-function Portfolio() {
+function Portfolio({allProjects}) {
   return (
     <>
-      {projects.map((project) => (
+      {allProjects.map((project) => (
         <ProjectPreview project={project} key={project.projectId} />
       ))}
       <CallToAction />

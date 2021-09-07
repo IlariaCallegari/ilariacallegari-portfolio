@@ -15,8 +15,7 @@ function Project({ myProject, allProjects }) {
   const [previousProject, setPreviousProject] = useState({});
   const [ref1, inView1] = useInView();
 
-  useEffect(
-    (myProject) => {
+  useEffect(() => {
       const idx = allProjects.indexOf(myProject);
 
       setNextProject(
@@ -30,8 +29,7 @@ function Project({ myProject, allProjects }) {
           ? allProjects[allProjects.length - 1]
           : allProjects[idx - 1]
       );
-    },
-    [myProject, allProjects]
+    }, [myProject, allProjects]
   );
 
   const {
