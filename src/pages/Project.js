@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import useStyles from "../styles/project-style.js";
 import { useInView } from "react-intersection-observer";
 import ProjectMainImg from "../components/ProjectMainImg.js";
@@ -9,8 +10,30 @@ import {
   StaticPreviewTwo,
 } from "../components/StaticPreviewImgs.js";
 
-function Project({ myProject }) {
+function Project({ myProject, allProjects }) {
+  const [nextProject, setNextProject] = useState({});
+  const [previousProject, setPreviousProject] = useState({});
   const [ref1, inView1] = useInView();
+
+  useEffect(
+    (myProject) => {
+      const idx = allProjects.indexOf(myProject);
+
+      setNextProject(
+        allProjects[idx + 1] === undefined
+          ? allProjects[0]
+          : allProjects[idx + 1]
+      );
+
+      setPreviousProject(
+        allProjects[idx - 1] === undefined
+          ? allProjects[allProjects.length - 1]
+          : allProjects[idx - 1]
+      );
+    },
+    [myProject, allProjects]
+  );
+
   const {
     projectCtn,
     leftSide,
@@ -21,6 +44,13 @@ function Project({ myProject }) {
     lessons,
     staticPreviewCtn,
   } = useStyles({ inView1 });
+
+  const keyLessonSession = () => (
+    <div className={lessons}>
+      <h3>Key Lessons</h3>
+      <p dangerouslySetInnerHTML={{ __html: myProject.keyLessons }}></p>
+    </div>
+  );
 
   return (
     <div className={projectCtn}>
@@ -38,15 +68,16 @@ function Project({ myProject }) {
                 ))}
               </ul>
             </div>
-            <ExternalLink text="visit website" link={myProject.link} />
             {myProject.code ? (
-              <ExternalLink text="visit code" link={myProject.code} />
-            ) : null}
+              <>
+                <ExternalLink text="visit deployment" link={myProject.link} />
+                <ExternalLink text="visit code" link={myProject.code} />
+              </>
+            ) : (
+              <ExternalLink text="visit website" link={myProject.link} />
+            )}
           </div>
-          <div className={lessons}>
-            <h3>Key Lessons</h3>
-            <p dangerouslySetInnerHTML={{ __html: myProject.keyLessons }}></p>
-          </div>
+          {myProject.keyLesson ? keyLessonSession : null}
         </div>
         <div className={projectBg}>
           <h3>Project Background</h3>
@@ -58,7 +89,10 @@ function Project({ myProject }) {
           </div>
         </div>
       </article>
-      <ProjectNavButton />
+      <ProjectNavButton
+        nextProject={nextProject}
+        previousProject={previousProject}
+      />
       <CallToAction />
     </div>
   );

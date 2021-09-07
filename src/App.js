@@ -1,4 +1,5 @@
 import "./App.css";
+import { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Page from "./pages/Page";
@@ -10,9 +11,9 @@ import Footer from "./components/Footer";
 import projects from "./projects";
 
 function App() {
-
+  const [allProjects] = useState([...projects]);
   const findProject = (project) => {
-    return projects.find((p) => p.project === project);
+    return allProjects.find((p) => p.project === project);
   };
 
   return (
@@ -41,6 +42,7 @@ function App() {
             render={(routeProps) => (
               <Page>
                 <Project
+                  allProjects={allProjects}
                   myProject={findProject(routeProps.match.params.project)}
                 />
               </Page>

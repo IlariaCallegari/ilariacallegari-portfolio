@@ -6,7 +6,7 @@ function Portfolio() {
   return (
     <>
       {projects.map((project) => (
-        <ProjectPreview project={project} />
+        <ProjectPreview project={project} key={project.projectId} />
       ))}
       <CallToAction />
     </>

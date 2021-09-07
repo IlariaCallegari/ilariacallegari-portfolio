@@ -13,8 +13,11 @@ const projects = [
     stack: [
       "Wordpress",
       "Stripe Payment Gateway",
-      "Amelia WP Booking Plugin",
+      "Amelia WP Booking",
       "The Event Calendar",
+      "YOAST SEO",
+      "Google Analytics",
+      "BPS Security",
     ],
   },
   {
@@ -39,6 +42,44 @@ const projects = [
       "Reactjs",
       "CSS-in-JS",
       "Custom elements from Material UI",
+    ],
+  },
+  {
+    projectId: 3,
+    project: "planets-app",
+    projectName: "Planets Facts App",
+    internalLink: "/portfolio/planets-app",
+    link: "https://planets-app.vercel.app/",
+    code: "https://github.com/IlariaCallegari/planets-app",
+    shortDescription:
+      "Responsive single page application created with React.js, React Router DOM, and JSS.",
+    projectBackground:
+      "This was one of my first challenges on Frontend Mentor. It's a simple application, in which the users should be able to toggle between 'Overview', 'Internal Structure' and 'Surface Geology'.",
+    keyLessons: `<p>While coding this project, I've noticed I need to focus more on using React's custom hooks more efficiently. I've also concluded that allowing more time to plan the structure of the code - i.e. how to best use the state hook API, how to best compose the HTML/JSX markup - to make the writing process quicker and more efficient would be beneficial.</p>`,
+    stack: [
+      "Flexbox",
+      "Desktop First Workflow",
+      "React-Router-DOM",
+      "Reactjs",
+      "CSS-in-JS",
+    ],
+  },
+  {
+    projectId: 4,
+    project: "pinsa-romana-uk",
+    projectName: "Pinsa Romana UK",
+    internalLink: "/portfolio/pinsa-romana-uk",
+    link: "https://pinsaromanauk.com/",
+    shortDescription:
+      "A simple WordPress landing page for an Italian food importing business. It integrates YOAST SEO, Chaty plugin, and Google Analytics. The landing page is fully responsive. I also took care of all design and branding elements.",
+    projectBackground:
+      "This simple landing page was commissioned by a client who needed a professional online presence for his business. His main concern was appearing in Google Search Result and for potential clients to be easy and intuitive to reach him via the website. I  install the Chaty plugin to allow potential clients to chat with him on WhatsApp straight from the web page and implemented SEO best practices.",
+    stack: [
+      "WordPress",
+      "Desktop First Workflow",
+      "Chaty",
+      "YOAST SEO",
+      "Google Analytics",
     ],
   },
 ];

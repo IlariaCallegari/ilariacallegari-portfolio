@@ -6,6 +6,7 @@ const useStyles = createUseStyles({
     display: "flex",
     width: "100%",
     marginTop: "3rem",
+    marginBottom: "10rem",
     opacity: 0,
     animation: inView && "$fade-in 0.7s ease-in forwards",
   }),
