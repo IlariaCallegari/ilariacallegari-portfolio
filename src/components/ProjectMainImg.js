@@ -3,6 +3,7 @@ import ProjOneMainImg from "../assets/desktop/Project-1-SingleProject-MainImg.pn
 import ProjTwoMainImg from "../assets/desktop/Project-2-SingleProject-MainImg.png";
 import ProjThreeMainImg from "../assets/desktop/Project-3-SingleProject-MainImg.png";
 import ProjFourMainImg from "../assets/desktop/Project-4-SingleProject-MainImg.png";
+import ProjFiveMainImg from "../assets/desktop/Project-5-SingleProject-MainImg.png";
 import useStyles from "../styles/project-style";
 
 function ProjectMainImg({ project }) {
@@ -20,6 +21,8 @@ function ProjectMainImg({ project }) {
       myImg = ProjThreeMainImg;
     } else if (project === "pinsa-romana-uk") {
       myImg = ProjFourMainImg;
+    } else if (project === "the-montessori-diary") {
+      myImg = ProjFiveMainImg;
     }
     return myImg;
   };

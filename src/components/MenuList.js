@@ -1,19 +1,37 @@
 import { NavLink } from "react-router-dom";
-import useStyles from "../styles/menuList-style";
+import useStyles from "../styles/menuList-style.js";
 
-function MenuList() {
-  const { menuList } = useStyles();
+function MenuList({ isFooter }) {
+  const { menuList, footLinks } = useStyles();
+  const links = [
+    {
+      name: "Home",
+      link: "/",
+    },
+    {
+      name: "Portfolio",
+      link: "/portfolio",
+    },
+    {
+      name: "Contact me",
+      link: "/contact-me",
+    },
+  ];
   return (
     <ul className={menuList}>
-      <li>
-        <NavLink to="/">Home</NavLink>
-      </li>
-      <li>
-        <NavLink to="/portfolio">Portfolio</NavLink>
-      </li>
-      <li>
-        <NavLink to="/contact-me">Contact Me</NavLink>
-      </li>
+      {links.map((link) => {
+        return (
+          <li key={link.name}>
+            {isFooter ? (
+              <NavLink to={link.link} className={footLinks}>
+                {link.name}
+              </NavLink>
+            ) : (
+              <NavLink to={link.link}>{link.name}</NavLink>
+            )}
+          </li>
+        );
+      })}
     </ul>
   );
 }

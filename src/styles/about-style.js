@@ -9,7 +9,7 @@ const useStyles = createUseStyles({
     animation: inView && "$fade-in 0.7s ease-in forwards",
   }),
   img: {
-    width: "35%",
+    width: "40%",
     height: "auto",
   },
   aboutDescrCtn: {

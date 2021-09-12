@@ -3,13 +3,14 @@ import MenuList from "./MenuList";
 import useStyles from "../styles/footer-style";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiFiverr } from "react-icons/si";
+import logo from "../assets/logo-white.svg";
 
 function Footer() {
   const { footer, link } = useStyles();
   return (
     <div className={footer}>
-      <Logo />
-      <MenuList />
+      <Logo src={logo} />
+      <MenuList isFooter/>
       <div>
         <a
           className={link}

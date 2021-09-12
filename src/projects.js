@@ -82,6 +82,24 @@ const projects = [
       "Google Analytics",
     ],
   },
+  {
+    projectId: 5,
+    project: "the-montessori-diary",
+    projectName: "The Montessori Diary",
+    internalLink: "/portfolio/the-montessori-diary",
+    link: "https://themontessoridiary.com/",
+    shortDescription:
+      "A WordPress blog for a parenting business. The blog includes integrations with Mailchimp newsletter, and the possibility to translate the site from English to Italian. I took care of all design and branding elements. The blog is fully responsive.",
+    projectBackground:
+      "This blog was commissioned to me by a client who needed a platform where to promote her upcoming book, by publishing book extracts and articles. She also wanted the possibility to quickly switch the language of the website, and the ability to keep her public informed by subscribing to her newsletter. A future version of the blog will also include the possibility to stream her podcast series from the website as also accessing directly her online courses.",
+    stack: [
+      "WordPress",
+      "Polyglot",
+      "Mailchimp",
+      "YOAST SEO",
+      "Google Analytics",
+    ],
+  },
 ];
 
 export default projects;

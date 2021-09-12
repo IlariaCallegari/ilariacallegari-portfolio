@@ -7,6 +7,8 @@ import ProjThreePreviewOne from "../assets/desktop/Project-3-PortfolioPage-MainI
 import ProjThreePreviewTwo from "../assets/desktop/Project-3-SingleProject-MobileDisplay.png";
 import ProjFourPreviewOne from "../assets/desktop/Project-4-PortfolioPage-MainImg.png";
 import ProjFourPreviewTwo from "../assets/desktop/Project-4-SingleProject-MobileDisplay.png";
+import ProjFivePreviewOne from "../assets/desktop/Project-5-PortfolioPage-MainImg.png";
+import ProjFivePreviewTwo from "../assets/desktop/Project-5-SingleProject-MobileDisplay.png";
 import useStyles from "../styles/project-style";
 
 function StaticPreviewOne({ project }) {
@@ -24,6 +26,8 @@ function StaticPreviewOne({ project }) {
       myImg = ProjThreePreviewOne;
     } else if (project === "pinsa-romana-uk") {
       myImg = ProjFourPreviewOne;
+    } else if (project === "the-montessori-diary") {
+      myImg = ProjFivePreviewOne;
     }
     return myImg;
   };
@@ -54,6 +58,8 @@ function StaticPreviewTwo({ project }) {
       return myImg;
     } else if (project === "pinsa-romana-uk") {
       myImg = ProjFourPreviewTwo;
+    } else if (project === "the-montessori-diary") {
+      myImg = ProjFivePreviewTwo;
     }
     return myImg;
   };

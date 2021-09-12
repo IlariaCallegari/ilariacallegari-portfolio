@@ -1,4 +1,5 @@
 import { createUseStyles } from "react-jss";
+import colors from "../utils/colors";
 
 const useStyles = createUseStyles({
   menuList: {
@@ -8,7 +9,13 @@ const useStyles = createUseStyles({
     "& li": {
       listStyleType: "none",
       textTransform: "uppercase",
-    }
+    },
+  },
+  footLinks: {
+    color: "#fff",
+    "&:hover": {
+      color: colors.primaryDarkGreen,
+    },
   },
 });
 

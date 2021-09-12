@@ -1,7 +1,7 @@
 import CallToAction from "../components/CallToAction";
 import ProjectPreview from "../components/ProjectPreview";
 
-function Portfolio({allProjects}) {
+function Portfolio({ allProjects }) {
   return (
     <>
       {allProjects.map((project) => (

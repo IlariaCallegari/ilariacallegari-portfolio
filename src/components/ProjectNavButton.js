@@ -16,24 +16,28 @@ function ProjectNavButton({ nextProject, previousProject }) {
 
   return (
     <div className={navButtonCtn} ref={ref}>
-      <div className={btnLeft}>
+      <Link
+        className={btnLeft}
+        to={previousProject.internalLink}
+        onClick={scrollToTop}
+      >
         <BsChevronLeft />
         <div>
-          <Link to={previousProject.internalLink} onClick={scrollToTop}>
-            {previousProject.projectName}
-          </Link>
+          <h4>{previousProject.projectName}</h4>
           <p> Previous Project </p>
         </div>
-      </div>
-      <div className={btnRight}>
+      </Link>
+      <Link
+        className={btnRight}
+        to={nextProject.internalLink}
+        onClick={scrollToTop}
+      >
         <div>
-          <Link to={nextProject.internalLink} onClick={scrollToTop}>
-            {nextProject.projectName}
-          </Link>
+          <h4>{nextProject.projectName}</h4>
           <p> Next Project </p>
         </div>
         <BsChevronRight />
-      </div>
+      </Link>
     </div>
   );
 }

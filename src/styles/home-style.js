@@ -10,7 +10,7 @@ const useStyles = createUseStyles({
     animation: inView && "$fade-in 0.7s ease-in forwards",
   }),
   heroImg: {
-    width: "inherit",
+    width: "100%",
   },
   heroHeading: {
     width: "35%",
