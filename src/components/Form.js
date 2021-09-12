@@ -2,17 +2,6 @@ import useForm from "../hooks/useForm";
 import useStyles from "../styles/form-style";
 
 function Form() {
-  const {
-    formCtn,
-    form,
-    label,
-    input,
-    textArea,
-    formBtn,
-    errorStyle,
-    headingCtn,
-    heading,
-  } = useStyles();
   const { handleSubmit, handleChange, data, errors } = useForm({
     initialValues: {
       name: "",
@@ -35,6 +24,18 @@ function Form() {
       },
     },
   });
+
+  const {
+    formCtn,
+    form,
+    label,
+    input,
+    textArea,
+    formBtn,
+    errorStyle,
+    headingCtn,
+    heading,
+  } = useStyles();
   return (
     <>
       <div className={headingCtn}>

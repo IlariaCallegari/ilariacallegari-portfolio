@@ -7,12 +7,19 @@ function ProjectNavButton({ nextProject, previousProject }) {
   const [ref, inView] = useInView();
   const { navButtonCtn, btnLeft, btnRight } = useStyles({ inView });
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className={navButtonCtn} ref={ref}>
       <div className={btnLeft}>
         <BsChevronLeft />
         <div>
-          <Link to={previousProject.internalLink}>
+          <Link to={previousProject.internalLink} onClick={scrollToTop}>
             {previousProject.projectName}
           </Link>
           <p> Previous Project </p>
@@ -20,7 +27,9 @@ function ProjectNavButton({ nextProject, previousProject }) {
       </div>
       <div className={btnRight}>
         <div>
-          <Link to={nextProject.internalLink}>{nextProject.projectName}</Link>
+          <Link to={nextProject.internalLink} onClick={scrollToTop}>
+            {nextProject.projectName}
+          </Link>
           <p> Next Project </p>
         </div>
         <BsChevronRight />

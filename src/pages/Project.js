@@ -16,21 +16,18 @@ function Project({ myProject, allProjects }) {
   const [ref1, inView1] = useInView();
 
   useEffect(() => {
-      const idx = allProjects.indexOf(myProject);
+    const idx = allProjects.indexOf(myProject);
 
-      setNextProject(
-        allProjects[idx + 1] === undefined
-          ? allProjects[0]
-          : allProjects[idx + 1]
-      );
+    setNextProject(
+      allProjects[idx + 1] === undefined ? allProjects[0] : allProjects[idx + 1]
+    );
 
-      setPreviousProject(
-        allProjects[idx - 1] === undefined
-          ? allProjects[allProjects.length - 1]
-          : allProjects[idx - 1]
-      );
-    }, [myProject, allProjects]
-  );
+    setPreviousProject(
+      allProjects[idx - 1] === undefined
+        ? allProjects[allProjects.length - 1]
+        : allProjects[idx - 1]
+    );
+  }, [myProject, allProjects]);
 
   const {
     projectCtn,
@@ -43,7 +40,7 @@ function Project({ myProject, allProjects }) {
     staticPreviewCtn,
   } = useStyles({ inView1 });
 
-  const keyLessonSession = () => (
+  const keyLessonsSession = () => (
     <div className={lessons}>
       <h3>Key Lessons</h3>
       <p dangerouslySetInnerHTML={{ __html: myProject.keyLessons }}></p>
@@ -75,7 +72,7 @@ function Project({ myProject, allProjects }) {
               <ExternalLink text="visit website" link={myProject.link} />
             )}
           </div>
-          {myProject.keyLesson ? keyLessonSession : null}
+          {myProject.keyLessons ? keyLessonsSession() : null}
         </div>
         <div className={projectBg}>
           <h3>Project Background</h3>

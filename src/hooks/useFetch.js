@@ -6,7 +6,7 @@ function useFetch() {
         "Content-type": "application/json",
       },
       body: JSON.stringify({ data }),
-    }).then((res) => res.json());
+    }).then((res) => console.log(res.status));
 
   return {
     fetchRoute,

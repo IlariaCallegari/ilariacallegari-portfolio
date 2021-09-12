@@ -1,17 +1,28 @@
 import { useState } from "react";
-import useFetch from "./useFetch";
+// import useFetch from "./useFetch";
 
 function useForm(options) {
   const [data, setData] = useState(options?.initialValues || {});
   const [errors, setErrors] = useState({});
   const [resStatus, setResStatus] = useState("");
-  const { fetchRoute } = useFetch();
 
   const handleChange = (key) => (e) => {
     //curried function
     const value = e.target.value;
     setData({ ...data, [key]: value });
   };
+
+  const fetchRoute = async (data) =>
+    await fetch("http://localhost:5000/send", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify({ data }),
+    }).then((res) => {
+      setData(options?.initialValues);
+      setResStatus(res.status);
+    });
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -45,29 +56,13 @@ function useForm(options) {
       }
       setErrors({});
     }
-
-    fetchRoute(data)
-      .then((res) => {
-        if (res.status === "success") {
-          setResStatus("success");
-          console.log(resStatus);
-        } else if (res.status === "fail") {
-          setResStatus("fail");
-        }
-      })
-      .then(() => {
-        setData({
-          name: "",
-          email: "",
-          message: "",
-        });
-      });
+    fetchRoute(data);
   };
 
   return {
     data,
-    resStatus,
     setData,
+    resStatus,
     handleChange,
     handleSubmit,
     errors,

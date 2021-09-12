@@ -3,8 +3,15 @@ import useStyles from "../styles/button-style";
 
 function Button({ text, link }) {
   const { btn } = useStyles();
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+    });
+  };
+
   return (
-    <Link className={btn} to={link}>
+    <Link className={btn} to={link} onClick={scrollToTop}>
       {text}
     </Link>
   );
@@ -19,4 +26,4 @@ function ExternalLink({ text, link }) {
   );
 }
 
-export {Button, ExternalLink};
+export { Button, ExternalLink };
