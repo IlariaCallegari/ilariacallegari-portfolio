@@ -1,15 +1,15 @@
-import express from "express";
-import nodemailer from "nodemailer";
-import cors from "cors";
-import dotenv from "dotenv";
-const app = express();
-dotenv.config()
-
-// const express = require("express");
-// const nodemailer = require("nodemailer");
+// import express from "express";
+// import nodemailer from "nodemailer";
+// import cors from "cors";
+// import dotenv from "dotenv";
 // const app = express();
-// const cors = require("cors");
-// require("dotenv").config();
+// dotenv.config()
+
+const express = require("express");
+const nodemailer = require("nodemailer");
+const app = express();
+const cors = require("cors");
+require("dotenv").config();
 
 const port = process.env.port || 5000;
 

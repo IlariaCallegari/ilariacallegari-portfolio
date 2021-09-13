@@ -1,6 +1,6 @@
 import React from "react";
 import useStyles from "../styles/contact-style";
-import ContactForm from "../components/ContactForm";
+import Form from "../components/Form";
 import { useInView } from "react-intersection-observer";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiFiverr } from "react-icons/si";
@@ -63,7 +63,7 @@ function Contact() {
           </div>
         </div>
       </div>
-      <ContactForm />
+      <Form />
     </React.Fragment>
   );
 }

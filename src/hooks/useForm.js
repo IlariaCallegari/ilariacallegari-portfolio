@@ -19,9 +19,9 @@ function useForm(options) {
         "Content-type": "application/json",
       },
       body: JSON.stringify({ data }),
-    }).then((res) => {
+    }).then(async (res) => {
       setData(options?.initialValues);
-      setResStatus(res.status);
+      return await setResStatus(res.status);
     });
 
   const handleSubmit = (e) => {

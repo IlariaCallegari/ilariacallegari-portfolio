@@ -2,6 +2,13 @@ import { createUseStyles } from "react-jss";
 import colors from "../utils/colors";
 
 const useStyles = createUseStyles({
+  contactFormCtn: (inView) => ({
+    display: "flex",
+    marginTop: "3rem",
+    marginBottom: "3rem",
+    opacity: 0,
+    animation: inView && "$fade-in 0.7s ease-in forwards",
+  }),
   headingCtn: {
     width: "40%",
   },
@@ -63,6 +70,11 @@ const useStyles = createUseStyles({
     fontSize: "0.8rem",
     color: "red",
     marginTop: "-1rem",
+  },
+  "@keyframes fade-in": {
+    "100%": {
+      opacity: 1,
+    },
   },
 });
 

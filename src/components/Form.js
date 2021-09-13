@@ -1,8 +1,12 @@
 import useForm from "../hooks/useForm";
 import useStyles from "../styles/form-style";
+import SuccessMessage from "./SuccessMessage";
+import FailMessage from "./FailMessage";
+import { useInView } from "react-intersection-observer";
 
 function Form() {
-  const { handleSubmit, handleChange, data, errors } = useForm({
+  const [ref, inView] = useInView();
+  const { handleSubmit, handleChange, data, errors, resStatus } = useForm({
     initialValues: {
       name: "",
       email: "",
@@ -26,6 +30,7 @@ function Form() {
   });
 
   const {
+    contactFormCtn,
     formCtn,
     form,
     label,
@@ -35,59 +40,69 @@ function Form() {
     errorStyle,
     headingCtn,
     heading,
-  } = useStyles();
+  } = useStyles(inView);
+
+  const Form = () => {
+    return (
+      <>
+        <div className={headingCtn}>
+          <h3 className={heading}>Contact Me</h3>
+        </div>
+        <div className={formCtn}>
+          <form className={form} id="contactForm" onSubmit={handleSubmit}>
+            <label className={label} htmlFor="name">
+              Name
+            </label>
+            <input
+              className={input}
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Jane Austen"
+              value={data.name || ""}
+              onChange={handleChange("name")}
+              required
+            />
+            {errors.name && <p className={errorStyle}>{errors.name}</p>}
+            <label className={label} htmlFor="email">
+              Email Address
+            </label>
+            <input
+              className={input}
+              type="text"
+              id="email"
+              name="email"
+              placeholder="email@example.com"
+              value={data.email || ""}
+              onChange={handleChange("email")}
+              required
+            />
+            {errors.email && <p className={errorStyle}>{errors.email}</p>}
+            <label className={label} htmlFor="message">
+              Message
+            </label>
+            <textarea
+              className={textArea}
+              rows="7"
+              placeholder="How can I help you?"
+              required
+              onChange={handleChange("message")}
+              value={data.message || ""}
+            />
+            <button className={formBtn} type="submit">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </>
+    );
+  };
   return (
-    <>
-      <div className={headingCtn}>
-        <h3 className={heading}>Contact Me</h3>
-      </div>
-      <div className={formCtn}>
-        <form className={form} id="contactForm" onSubmit={handleSubmit}>
-          <label className={label} htmlFor="name">
-            Name
-          </label>
-          <input
-            className={input}
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Jane Austen"
-            value={data.name || ""}
-            onChange={handleChange("name")}
-            required
-          />
-          {errors.name && <p className={errorStyle}>{errors.name}</p>}
-          <label className={label} htmlFor="email">
-            Email Address
-          </label>
-          <input
-            className={input}
-            type="text"
-            id="email"
-            name="email"
-            placeholder="email@example.com"
-            value={data.email || ""}
-            onChange={handleChange("email")}
-            required
-          />
-          {errors.email && <p className={errorStyle}>{errors.email}</p>}
-          <label className={label} htmlFor="message">
-            Message
-          </label>
-          <textarea
-            className={textArea}
-            rows="7"
-            placeholder="How can I help you?"
-            required
-            onChange={handleChange("message")}
-            value={data.message || ""}
-          />
-          <button className={formBtn} type="submit">
-            Send Message
-          </button>
-        </form>
-      </div>
-    </>
+    <div className={contactFormCtn} ref={ref}>
+      {resStatus === "" && Form()}
+      {resStatus === 200 && <SuccessMessage />}
+      {resStatus !== 200 && "" && <FailMessage />}
+    </div>
   );
 }
 
