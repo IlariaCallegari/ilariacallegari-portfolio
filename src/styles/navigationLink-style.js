@@ -3,6 +3,7 @@ import colors from "../utils/colors";
 
 const useStyles = createUseStyles({
   navLink: {
+    marginTop: "2rem",
     textTransform: "uppercase",
     transition: "all 0.5s ease-in",
     display: "inline-block",

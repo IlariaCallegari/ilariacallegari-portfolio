@@ -1,7 +1,7 @@
 import { createUseStyles } from "react-jss";
 
 const useStyles = createUseStyles({
-  successCtn: {
+  messageCtn: {
     textAlign: "center",
     margin: "0 auto",
   },

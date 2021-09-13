@@ -99,9 +99,9 @@ function Form() {
   };
   return (
     <div className={contactFormCtn} ref={ref}>
-      {resStatus === "" && Form()}
+      {resStatus === null && Form()}
       {resStatus === 200 && <SuccessMessage />}
-      {resStatus !== 200 && "" && <FailMessage />}
+      {resStatus !== 200 && resStatus !== null && <FailMessage />}
     </div>
   );
 }

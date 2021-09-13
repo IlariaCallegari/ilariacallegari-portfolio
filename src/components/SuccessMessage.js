@@ -1,11 +1,14 @@
 import successSvg from "../assets/success.svg";
 import NavigationLink from "./NavigationLink";
-import useStyles from "../styles/successMessage-style";
+import useStyles from "../styles/messages-style";
 
 function SuccessMessage() {
-  const { successCtn } = useStyles();
+  const { messageCtn } = useStyles();
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0 });
+  };
   return (
-    <div className={successCtn}>
+    <div className={messageCtn}>
       <img src={successSvg} alt="fireWork" />
       <h3>Woohoo!</h3>
       <h4>Congrats, your message arrived to destination!</h4>
@@ -13,7 +16,7 @@ function SuccessMessage() {
         Thank you for getting in touch.
         <br />I will get back to you as soon as possible.
       </p>
-      <NavigationLink text="Back to homepage" link="/" />
+      <NavigationLink text="Back to homepage" link="/" onClick={scrollToTop} />
     </div>
   );
 }

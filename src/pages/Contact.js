@@ -18,14 +18,14 @@ function Contact() {
         <div className={descriptionCtn}>
           <h3>For Companies</h3>
           <p>
-            I’m currently looking for a new role as a Front End Developer and am
+            I’m currently looking for a new role as a Front End Developer and I am
             open to a wide range of opportunities. My preference would be to
             find a position in a company in the Poole/Bournemouth (UK) area. But
             I’m also happy to hear about remote opportunites in London or in the
             UK. Check out my online profiles and get in touch using the form
             down below.
           </p>
-          <h3>For Independent Clients</h3>
+          <h3>For Private Clients</h3>
           <p>
             Are you looking for a Web Developer to kickstart your business? You
             are in the right place! In the past year, I've helped small
