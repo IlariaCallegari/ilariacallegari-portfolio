@@ -13,7 +13,7 @@ function Home() {
         <h2 id="about">About Me</h2>
         <p>
           Freelance Web Developer looking to join a joyful team as a Front End
-          Developer to work for a good cause. I invested the past year to
+          Developer to work for a good cause. I invested the past two years to
           retrain as a web developer, focussing my learning efforts on studying
           the MERN stack. I chose React.js as my front-end framework of choice,
           for its ability to create smooth user experiences by writing

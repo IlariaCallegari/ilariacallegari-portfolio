@@ -3,6 +3,7 @@ import { useInView } from "react-intersection-observer";
 import { Link } from "react-scroll";
 import mainImage from "../assets/main-img.svg";
 import About from "../components/About";
+import Technologies from "../components/Technologies";
 import CallToAction from "../components/CallToAction";
 import useStyles from "../styles/home-style";
 
@@ -25,6 +26,7 @@ function Home() {
         </div>
       </div>
       <About />
+      <Technologies />
       <CallToAction />
     </React.Fragment>
   );

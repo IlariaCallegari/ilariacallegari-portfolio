@@ -9,6 +9,9 @@ const useStyles = createUseStyles({
     "& li": {
       listStyleType: "none",
       textTransform: "uppercase",
+      "&:hover $navLinkDecor": {
+        width: "100%",
+      }
     },
   },
   footLinks: {
@@ -16,6 +19,12 @@ const useStyles = createUseStyles({
     "&:hover": {
       color: colors.primaryDarkGreen,
     },
+  },
+  navLinkDecor: {
+    width: 0,
+    height: "2px",
+    background: colors.primaryDarkGreen,
+    transition: "all 0.5s ease-in",
   },
 });
 

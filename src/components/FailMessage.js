@@ -17,7 +17,7 @@ function FailMessage() {
         <br />
         If you still can't send me a message than send me an email directly to{" "}
         <br />{" "}
-        <a href="mailto:ilaria@ilariacallegari.com">
+        <a href="mailto:ilaria@ilariacallegari.com?subject=We really want to hire you, Ilaria!">
           ilaria@ilariacallegari.com
         </a>
       </p>
