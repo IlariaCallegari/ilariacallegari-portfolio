@@ -20,6 +20,10 @@ const useStyles = createUseStyles({
       [sizes.down("laptop")]: {
         width: "30%",
       },
+      [sizes.down("tablet")]: {
+        marginLeft:"1.25rem",
+        marginRight: "1.25rem",
+      },
       [sizes.down("mobileL")]: {
         borderTop: "none",
       },
@@ -30,6 +34,9 @@ const useStyles = createUseStyles({
     fontWeight: 200,
     lineHeight: "2.85rem",
     width: "35%",
+    [sizes.down("tablet")]: {
+      fontSize: "1.85rem"
+    },
     [sizes.down("mobileL")]: {
       width: "100%",
       textAlign: "center",

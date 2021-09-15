@@ -6,10 +6,7 @@ const useStyles = createUseStyles({
   menuList: {
     display: "flex",
     justifyContent: "space-between",
-    width: "30%",
-    [sizes.down("tablet")]: {
-      width: "40%",
-    },
+    width: "40%",
     [sizes.down("mobileL")]: {
       flexDirection: "column",
       alignItems: "center",

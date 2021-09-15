@@ -18,13 +18,13 @@ const useStyles = createUseStyles({
   },
   iconCtn: {
     [sizes.down("mobileL")]: {
-      width: "30%",
+      width: "45%",
       display: "flex",
-      justifyContent: "space-around"
+      justifyContent: "space-between",
+      marginTop: "1rem"
     }
   },
   link: {
-    fontSize: "2rem",
     marginRight: "1rem",
     color: "#fff",
     [sizes.down("mobileL")]: {

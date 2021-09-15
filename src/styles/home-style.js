@@ -14,7 +14,7 @@ const useStyles = createUseStyles({
     width: "100%",
   },
   heroHeading: {
-    width: "35%",
+    width: "40%",
     textAlign: "left",
     background: "#fff",
     position: "absolute",

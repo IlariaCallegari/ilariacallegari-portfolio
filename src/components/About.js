@@ -16,7 +16,7 @@ function Home({ outerWidth }) {
 
   return (
     <session className={aboutCtn} ref={ref}>
-      {outerWidth >= 768 || outerWidth <= 430 ? desktopImg : tabletImg}
+      {outerWidth >= 950 || outerWidth <= 430 ? desktopImg : tabletImg}
       <div className={aboutDescrCtn}>
         <h2 id="about">About Me</h2>
         <article>
