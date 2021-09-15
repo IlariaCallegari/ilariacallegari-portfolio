@@ -1,14 +1,22 @@
 import { useInView } from "react-intersection-observer";
 import aboutImg from "../assets/about-me-pic.png";
-import {Button} from "../components/Buttons";
+import aboutImgTablet from "../assets/about-me-pic-tablet.png";
+import { Button } from "../components/Buttons";
 import useStyles from "../styles/about-style";
 
-function Home() {
+function Home({ outerWidth }) {
   const [ref, inView] = useInView();
   const { aboutCtn, img, aboutDescrCtn } = useStyles(inView);
+  const desktopImg = (
+    <img className={img} src={aboutImg} alt="Ilaria Callegari" />
+  );
+  const tabletImg = (
+    <img className={img} src={aboutImgTablet} alt="Ilaria Callegari" />
+  );
+
   return (
     <div className={aboutCtn} ref={ref}>
-      <img className={img} src={aboutImg} alt="Ilaria Callegari" />
+      {outerWidth <= 768 ? tabletImg : desktopImg}
       <div className={aboutDescrCtn}>
         <h2 id="about">About Me</h2>
         <article>

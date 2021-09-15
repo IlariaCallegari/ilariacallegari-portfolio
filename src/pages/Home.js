@@ -7,7 +7,7 @@ import Technologies from "../components/Technologies";
 import CallToAction from "../components/CallToAction";
 import useStyles from "../styles/home-style";
 
-function Home() {
+function Home({ outerWidth }) {
   const [ref, inView] = useInView();
   const { heroCtn, heroImg, heroHeading } = useStyles(inView);
   return (
@@ -25,7 +25,7 @@ function Home() {
           </Link>
         </div>
       </div>
-      <About />
+      <About outerWidth={outerWidth} />
       <Technologies />
       <CallToAction />
     </React.Fragment>

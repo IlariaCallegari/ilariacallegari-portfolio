@@ -17,6 +17,12 @@ const useStyles = createUseStyles({
       borderTop: `2px solid ${colors.lightGrey}`,
       marginLeft: "2rem",
       marginRight: "2rem",
+      [sizes.down("laptop")]: {
+        width: "30%",
+      },
+      [sizes.down("mobileL")]: {
+        borderTop: "none",
+      },
     },
   }),
   ctaHeading: {

@@ -9,6 +9,9 @@ const useStyles = createUseStyles({
     justifyContent: "space-between",
     alignItems: "center",
     background: colors.secondaryLightPink,
+    [sizes.down("laptop")]: {
+      padding: "1rem 5% 0 5%"
+    },
     [sizes.down("mobileL")]: {
       flexDirection: "column",
     },

@@ -8,7 +8,7 @@ const useStyles = createUseStyles({
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    [sizes.down("mobileL")]: {
+    [sizes.down("laptop")]: {
       width: "90%",
       marginTop: "1rem"
     },

@@ -43,6 +43,9 @@ const useStyles = createUseStyles({
         lineHeight: "3rem",
         marginBottom: "0.5rem",
       },
+      [sizes.down("mobileL")]: {
+        fontSize: "2.25rem",
+      }
     },
     "& a": {
       display: "inline-block",

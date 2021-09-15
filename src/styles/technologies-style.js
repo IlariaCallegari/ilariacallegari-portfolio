@@ -1,5 +1,6 @@
 import { createUseStyles } from "react-jss";
 import colors from "../utils/colors";
+import sizes from "../utils/breakpoints";
 
 const useStyles = createUseStyles({
   mainCtn: (inView) => ({
@@ -17,6 +18,13 @@ const useStyles = createUseStyles({
       marginBottom: "2.5rem",
       paddingTop: "2.5rem",
       textAlign: "center",
+      [sizes.down("mobileL")]: {
+        borderTop: "none",
+        width: "100%",
+        fontSize: "2rem",
+        paddingTop: 0,
+        textAlign: "left"
+      },
     },
   }),
   skillsCtn: {
@@ -30,6 +38,13 @@ const useStyles = createUseStyles({
       display: "flex",
       alignItems: "center",
       borderRight: `2px solid ${colors.lightGrey}`,
+      [sizes.down("mobileL")]: {
+        borderRight: "none",
+      },
+    },
+    [sizes.down("mobileL")]: {
+      width: "100%",
+      flexDirection: "column",
     },
   },
   techCtn: {
@@ -38,9 +53,19 @@ const useStyles = createUseStyles({
     flexWrap: "wrap",
     width: "50%",
     paddingLeft: "2rem",
+    [sizes.down("mobileL")]: {
+      width: "100%",
+      paddingLeft: 0,
+      justifyContent: "flex-start",
+      borderBottom: `2px solid ${colors.lightGrey}`,
+      paddingBottom: "2rem",
+    },
     "& div": {
       textAlign: "center",
       padding: "1rem",
+      [sizes.down("mobileL")]: {
+        padding: "1rem 1rem 0 0",
+      },
       "&:hover svg, &:hover p": {
         color: colors.secondaryPink,
       },
@@ -55,6 +80,12 @@ const useStyles = createUseStyles({
         transition: "color 0.2s ease-in",
       },
     },
+  },
+  [sizes.down("mobileL")]: {
+    mainCtn: (inView) => ({
+      marginTop: "5rem",
+      alignItems: "flex-start"
+    }),
   },
   "@keyframes fade-in": {
     "100%": {
