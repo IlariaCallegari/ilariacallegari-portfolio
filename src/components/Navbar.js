@@ -1,15 +1,15 @@
-
 import Logo from "../components/Logo";
 import logo from "../assets/logo.svg";
+import { GiHamburgerMenu } from "react-icons/gi";
 import MenuList from "./MenuList";
 import useStyles from "../styles/navbar-style";
 
-function Navbar({outerWidth}) {
+function Navbar({ outerWidth }) {
   const { navbar } = useStyles();
   return (
     <nav className={navbar}>
       <Logo src={logo} />
-      {outerWidth <= 430 ? null : <MenuList />}
+      {outerWidth <= 430 ? <GiHamburgerMenu size="30" color="#95BAB7" /> : <MenuList />}
     </nav>
   );
 }

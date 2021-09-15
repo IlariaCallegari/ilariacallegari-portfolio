@@ -24,7 +24,7 @@ function Stack() {
   const { mainCtn, techCtn, skillsCtn } = useStyles(inView);
 
   return (
-    <div className={mainCtn} ref={ref}>
+    <session className={mainCtn} ref={ref}>
       <h2>Technologies</h2>
       <div className={skillsCtn}>
         <h3>My Stack</h3>
@@ -224,7 +224,7 @@ function Stack() {
           </ReactToolTip>
         </div>
       </div>
-    </div>
+    </session>
   );
 }
 

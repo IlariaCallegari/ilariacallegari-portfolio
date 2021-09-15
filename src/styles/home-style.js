@@ -12,14 +12,13 @@ const useStyles = createUseStyles({
   }),
   heroImg: {
     width: "100%",
-    height: "auto",
   },
   heroHeading: {
     width: "35%",
     textAlign: "left",
     background: "#fff",
     position: "absolute",
-    bottom: "9px",
+    bottom: 0,
     paddingTop: "3rem",
     display: "flex",
     flexDirection: "column",

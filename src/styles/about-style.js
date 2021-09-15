@@ -17,7 +17,7 @@ const useStyles = createUseStyles({
     },
   },
   aboutDescrCtn: {
-    margin: "0 10rem",
+    margin: "0 7rem",
     borderTop: `2px solid ${colors.lightGrey}`,
     borderBottom: `2px solid ${colors.lightGrey}`,
     paddingBottom: "2.5rem",

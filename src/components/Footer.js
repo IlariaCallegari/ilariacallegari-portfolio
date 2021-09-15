@@ -6,12 +6,12 @@ import { SiFiverr } from "react-icons/si";
 import logo from "../assets/logo-white.svg";
 
 function Footer() {
-  const { footer, link } = useStyles();
+  const { footer, iconCtn, link } = useStyles();
   return (
     <footer className={footer}>
       <Logo src={logo} />
       <MenuList isFooter />
-      <div>
+      <div className={iconCtn}>
         <a
           className={link}
           target="_blank"

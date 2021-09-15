@@ -16,12 +16,19 @@ const useStyles = createUseStyles({
       flexDirection: "column",
     },
   },
+  iconCtn: {
+    [sizes.down("mobileL")]: {
+      width: "30%",
+      display: "flex",
+      justifyContent: "space-around"
+    }
+  },
   link: {
     fontSize: "2rem",
     marginRight: "1rem",
     color: "#fff",
     [sizes.down("mobileL")]: {
-      fontSize: "2.5rem"
+      marginRight: 0
     }
   },
 });

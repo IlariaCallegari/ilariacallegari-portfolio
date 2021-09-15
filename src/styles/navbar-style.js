@@ -10,7 +10,10 @@ const useStyles = createUseStyles({
     alignItems: "center",
     [sizes.down("laptop")]: {
       width: "90%",
-      marginTop: "1rem"
+      marginTop: "1rem",
+    },
+    [sizes.down("mobileL")]: {
+      alignItems: "flex-start",
     },
   },
 });
