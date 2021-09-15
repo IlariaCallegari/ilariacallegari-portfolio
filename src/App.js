@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Page from "./pages/Page";
@@ -11,15 +11,23 @@ import projects from "./projects";
 
 function App() {
   const [allProjects] = useState([...projects]);
-  
+  const [outerWidth, setInnerWidth] = useState(window.outerWidth);
+
   const findProject = (project) => {
     return allProjects.find((p) => p.project === project);
   };
 
+  useEffect(() => {
+    function handleResize() {
+      setInnerWidth(window.outerWidth);
+    }
+    window.addEventListener("resize", handleResize);
+  });
+
   return (
     <Router>
       <div className="App">
-        <Navbar />
+        <Navbar outerWidth={outerWidth} />
         <Switch>
           <Route exact path="/">
             <Page>

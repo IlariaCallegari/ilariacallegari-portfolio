@@ -1,5 +1,6 @@
 import { createUseStyles } from "react-jss";
 import colors from "../utils/colors";
+import sizes from "../utils/breakpoints";
 
 const useStyles = createUseStyles({
   callToAction: (inView) => ({
@@ -23,6 +24,15 @@ const useStyles = createUseStyles({
     fontWeight: 200,
     lineHeight: "2.85rem",
     width: "35%",
+    [sizes.down("mobileL")]: {
+      width: "100%",
+      textAlign: "center",
+    },
+  },
+  [sizes.down("mobileL")]: {
+    callToAction: (inView) => ({
+      flexDirection: "column",
+    }),
   },
   "@keyframes fade-in": {
     "100%": {

@@ -1,4 +1,5 @@
 import { createUseStyles } from "react-jss";
+import sizes from "../utils/breakpoints";
 
 const useStyles = createUseStyles({
   navbar: {
@@ -7,6 +8,10 @@ const useStyles = createUseStyles({
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
+    [sizes.down("mobileL")]: {
+      width: "90%",
+      marginTop: "1rem"
+    },
   },
 });
 

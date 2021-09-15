@@ -1,5 +1,6 @@
 import { createUseStyles } from "react-jss";
 import colors from "../utils/colors";
+import sizes from "../utils/breakpoints";
 
 const useStyles = createUseStyles({
   footer: {
@@ -8,11 +9,17 @@ const useStyles = createUseStyles({
     justifyContent: "space-between",
     alignItems: "center",
     background: colors.secondaryLightPink,
+    [sizes.down("mobileL")]: {
+      flexDirection: "column",
+    },
   },
   link: {
     fontSize: "2rem",
     marginRight: "1rem",
-    color: "#fff"
+    color: "#fff",
+    [sizes.down("mobileL")]: {
+      fontSize: "2.5rem"
+    }
   },
 });
 
