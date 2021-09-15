@@ -8,9 +8,9 @@ import logo from "../assets/logo-white.svg";
 function Footer() {
   const { footer, link } = useStyles();
   return (
-    <div className={footer}>
+    <footer className={footer}>
       <Logo src={logo} />
-      <MenuList isFooter/>
+      <MenuList isFooter />
       <div>
         <a
           className={link}
@@ -37,7 +37,7 @@ function Footer() {
           <SiFiverr />
         </a>
       </div>
-    </div>
+    </footer>
   );
 }
 

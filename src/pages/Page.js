@@ -1,7 +1,7 @@
 import useStyles from "../styles/page-style";
 function Page({ children }) {
   const { general } = useStyles();
-  return <section className={general}>{children}</section>;
+  return <main className={general}>{children}</main>;
 }
 
 export default Page;

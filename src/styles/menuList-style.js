@@ -16,6 +16,7 @@ const useStyles = createUseStyles({
   },
   footLinks: {
     color: "#fff",
+    transition: "color 0.2s ease-in",
     "&:hover": {
       color: colors.primaryDarkGreen,
     },

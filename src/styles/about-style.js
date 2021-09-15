@@ -23,7 +23,7 @@ const useStyles = createUseStyles({
       fontSize: "2.5rem",
       fontWeight: 200,
     },
-    "& p": {
+    "& article": {
       marginBottom: "2rem",
     },
   },

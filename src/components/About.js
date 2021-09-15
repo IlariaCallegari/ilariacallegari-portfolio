@@ -11,7 +11,7 @@ function Home() {
       <img className={img} src={aboutImg} alt="Ilaria Callegari" />
       <div className={aboutDescrCtn}>
         <h2 id="about">About Me</h2>
-        <p>
+        <article>
           Freelance Web Developer looking to join a joyful team as a Front End
           Developer to work for a good cause. I invested the past two years to
           retrain as a web developer, focussing my learning efforts on studying
@@ -20,7 +20,7 @@ function Home() {
           easy-to-read and easily scalable code. Creating harmonious and
           intuitive user experiences is my main goal, and I go the extra mile to
           make my projects work well responsively.
-        </p>
+        </article>
         <Button text="Go to portfolio" link="/portfolio" />
       </div>
     </div>
