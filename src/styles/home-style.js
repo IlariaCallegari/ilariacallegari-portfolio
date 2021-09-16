@@ -27,7 +27,7 @@ const useStyles = createUseStyles({
       width: "45%",
       paddingTop: "2rem",
     },
-    [sizes.down("mobileL")]: {
+    [sizes.down("tabletS")]: {
       position: "static",
       width: "100%",
     },

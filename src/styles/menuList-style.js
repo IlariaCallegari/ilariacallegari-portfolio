@@ -7,6 +7,9 @@ const useStyles = createUseStyles({
     display: "flex",
     justifyContent: "space-between",
     width: "40%",
+    [sizes.down("tabletS")]: {
+      width: "50%",
+    },
     [sizes.down("mobileL")]: {
       flexDirection: "column",
       alignItems: "center",

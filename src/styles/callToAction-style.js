@@ -24,7 +24,7 @@ const useStyles = createUseStyles({
         marginLeft:"1.25rem",
         marginRight: "1.25rem",
       },
-      [sizes.down("mobileL")]: {
+      [sizes.down("tabletS")]: {
         borderTop: "none",
       },
     },
@@ -37,12 +37,12 @@ const useStyles = createUseStyles({
     [sizes.down("tablet")]: {
       fontSize: "1.85rem"
     },
-    [sizes.down("mobileL")]: {
+    [sizes.down("tabletS")]: {
       width: "100%",
       textAlign: "center",
     },
   },
-  [sizes.down("mobileL")]: {
+  [sizes.down("tabletS")]: {
     callToAction: (inView) => ({
       flexDirection: "column",
     }),

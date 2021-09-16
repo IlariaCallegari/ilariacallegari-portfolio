@@ -9,7 +9,7 @@ function Navbar({ outerWidth }) {
   return (
     <nav className={navbar}>
       <Logo src={logo} />
-      {outerWidth <= 430 ? <GiHamburgerMenu size="30" color="#95BAB7" /> : <MenuList />}
+      {outerWidth <= 440 ? <GiHamburgerMenu size="30" color="#95BAB7" /> : <MenuList />}
     </nav>
   );
 }

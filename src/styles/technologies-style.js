@@ -45,6 +45,7 @@ const useStyles = createUseStyles({
     [sizes.down("mobileL")]: {
       width: "100%",
       flexDirection: "column",
+      marginTop: 0
     },
   },
   techCtn: {

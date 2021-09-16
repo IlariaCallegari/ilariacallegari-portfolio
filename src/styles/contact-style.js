@@ -10,7 +10,7 @@ const useStyles = createUseStyles({
     opacity: 0,
     borderTop: `2px solid ${colors.lightGrey}`,
     borderBottom: `2px solid ${colors.lightGrey}`,
-    padding: "3rem 0"
+    padding: "3rem 0",
   }),
   headingCtn: {
     width: "40%",
@@ -25,14 +25,13 @@ const useStyles = createUseStyles({
       marginBottom: "1.5rem",
     },
     "& h3:nth-of-type(2)": {
-      marginTop: "1.5rem"
-    }
+      marginTop: "1.5rem",
+    },
   },
   linkCtn: {
     marginTop: "3rem",
   },
   link: {
-    fontSize: "2rem",
     marginRight: "1rem",
   },
   "@keyframes fade-in": {

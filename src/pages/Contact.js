@@ -42,7 +42,7 @@ function Contact() {
               rel="noreferrer"
               href="https://github.com/ilariacallegari"
             >
-              <FaGithub />
+              <FaGithub size="30"/>
             </a>
             <a
               className={link}
@@ -50,7 +50,7 @@ function Contact() {
               rel="noreferrer"
               href="https://www.linkedin.com/in/ilariacallegari/"
             >
-              <FaLinkedin />
+              <FaLinkedin size="30"/>
             </a>
             <a
               className={link}
@@ -58,7 +58,7 @@ function Contact() {
               rel="noreferrer"
               href="https://www.fiverr.com/ilariacallegari/create-a-responsive-and-modern-website-for-your-business"
             >
-              <SiFiverr />
+              <SiFiverr size="30"/>
             </a>
           </div>
         </div>
