@@ -27,7 +27,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar outerWidth={outerWidth}/>
+        <Navbar outerWidth={outerWidth} />
         <Switch>
           <Route exact path="/">
             <Page>
@@ -36,7 +36,7 @@ function App() {
           </Route>
           <Route exact path="/portfolio">
             <Page>
-              <Portfolio allProjects={allProjects} />
+              <Portfolio allProjects={allProjects} outerWidth={outerWidth} />
             </Page>
           </Route>
           <Route exact path="/contact-me">

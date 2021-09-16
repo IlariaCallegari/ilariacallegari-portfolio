@@ -1,18 +1,17 @@
 import { NavLink } from "react-router-dom";
 import links from "../utils/links";
-import useStyles from "../styles/mobileMenu-style";
+import useStyles from "../styles/mobMenu-style";
 
 function MobMenu() {
-  const { mobileMenuCtn, menuList, navLinkDecor } = useStyles();
+  const { mobileMenuCtn} = useStyles();
   return (
     <div className={mobileMenuCtn}>
-      <ul className={menuList}>
+      <ul>
         {links.map((link) => {
           return (
             <li key={link.name}>
               <NavLink to={link.link}>
                 {link.name}
-                <div className={navLinkDecor}></div>
               </NavLink>
             </li>
           );
