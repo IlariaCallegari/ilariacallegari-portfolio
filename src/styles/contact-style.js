@@ -1,5 +1,6 @@
 import { createUseStyles } from "react-jss";
 import colors from "../utils/colors";
+import sizes from "../utils/breakpoints";
 
 const useStyles = createUseStyles({
   getInTouchCtn: (inView) => ({
@@ -14,6 +15,9 @@ const useStyles = createUseStyles({
   }),
   headingCtn: {
     width: "40%",
+    [sizes.down("tablet")]: {
+      width: "100%",
+    }
   },
   heading: {
     fontSize: "2rem",
@@ -21,6 +25,9 @@ const useStyles = createUseStyles({
   },
   descriptionCtn: {
     width: "60%",
+    [sizes.down("tablet")]: {
+      width: "100%",
+    },
     "& h3": {
       marginBottom: "1.5rem",
     },
@@ -33,6 +40,11 @@ const useStyles = createUseStyles({
   },
   link: {
     marginRight: "1rem",
+  },
+  [sizes.down("tablet")]: {
+    getInTouchCtn: (inView) => ({
+      flexDirection: "column",
+    }),
   },
   "@keyframes fade-in": {
     "100%": {

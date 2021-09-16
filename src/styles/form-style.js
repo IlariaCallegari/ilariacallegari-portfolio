@@ -1,5 +1,6 @@
 import { createUseStyles } from "react-jss";
 import colors from "../utils/colors";
+import sizes from "../utils/breakpoints";
 
 const useStyles = createUseStyles({
   contactFormCtn: (inView) => ({
@@ -11,6 +12,9 @@ const useStyles = createUseStyles({
   }),
   headingCtn: {
     width: "40%",
+    [sizes.down("tablet")]: {
+      width: "100%",
+    }
   },
   heading: {
     fontSize: "2rem",
@@ -18,6 +22,9 @@ const useStyles = createUseStyles({
   },
   formCtn: {
     width: "60%",
+    [sizes.down("tablet")]: {
+      width: "100%"
+    },
   },
   form: {
     display: "flex",
@@ -57,11 +64,14 @@ const useStyles = createUseStyles({
     fontFamily: "inherit",
     fontSize: "1rem",
     textTransform: "uppercase",
-    width: "30%",
+    width: "40%",
     background: colors.secondaryPink,
     color: "#fff",
     cursor: "pointer",
     transition: "all 0.3s ease-in",
+    [sizes.down("mobileL")]: {
+      width: "50%",
+    },
     "&:hover": {
       background: colors.primaryDarkGreen,
     },
@@ -70,6 +80,11 @@ const useStyles = createUseStyles({
     fontSize: "0.8rem",
     color: "red",
     marginTop: "-1rem",
+  },
+  [sizes.down("tablet")]: {
+    contactFormCtn: (inView) => ({
+      flexDirection: "column",
+    }),
   },
   "@keyframes fade-in": {
     "100%": {
