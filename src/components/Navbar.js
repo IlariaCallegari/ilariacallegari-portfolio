@@ -4,7 +4,7 @@ import logo from "../assets/logo.svg";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
 import MenuList from "./MenuList";
-import MobileMenu from "./MobileMenu";
+import MobMenu from "./MobMenu";
 import useStyles from "../styles/navbar-style";
 import colors from "../utils/colors";
 
@@ -30,7 +30,7 @@ function Navbar({ outerWidth }) {
   const closeMenu = (
     <>
       <IoMdClose size="30" color={colors.secondaryPink} onClick={toggleMenu} />
-      <MobileMenu />
+      <MobMenu />
     </>
   );
 

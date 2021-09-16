@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import links from "../utils/links";
 import useStyles from "../styles/mobileMenu-style";
 
-function MobileMenu() {
+function MobMenu() {
   const { mobileMenuCtn, menuList, navLinkDecor } = useStyles();
   return (
     <div className={mobileMenuCtn}>
@@ -22,4 +22,4 @@ function MobileMenu() {
   );
 }
 
-export default MobileMenu;
+export default MobMenu;
