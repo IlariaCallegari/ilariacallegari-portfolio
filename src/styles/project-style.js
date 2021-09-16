@@ -34,6 +34,9 @@ const useStyles = createUseStyles({
       display: "flex",
       flexWrap: "wrap",
     },
+    [sizes.down("mobileL")]: {
+      flexDirection: "column",
+    },
     "& h2": {
       fontSize: "2.5rem",
       fontWeight: 200,
@@ -55,6 +58,9 @@ const useStyles = createUseStyles({
     [sizes.down("tablet")]: {
       width: "50%",
     },
+    [sizes.down("mobileL")]: {
+      width: "100%",
+    },
   },
   stackCtn: {
     [sizes.down("tablet")]: {
@@ -62,6 +68,9 @@ const useStyles = createUseStyles({
       flexDirection: "column",
       width: "50%",
       paddingLeft: "5rem",
+    },
+    [sizes.down("tablet")]: {
+      width: "100%",
     },
   },
   stack: {

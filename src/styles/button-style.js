@@ -12,6 +12,7 @@ const useStyles = createUseStyles({
     marginRight: "1rem",
     [sizes.down("tablet")]: {
       padding: "0.85rem 1.85rem",
+      marginBottom: "1rem"
     },
     "&:hover": {
       background: colors.primaryGreen,
