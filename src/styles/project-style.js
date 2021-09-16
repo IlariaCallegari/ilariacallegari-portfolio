@@ -71,12 +71,23 @@ const useStyles = createUseStyles({
     margin: "5rem 10rem 5rem 0",
     borderBottom: `2px solid ${colors.lightGrey}`,
     paddingBottom: "3rem",
+    [sizes.down("tablet")]: {
+      margin: "3rem 0",
+      paddingBottom: "0"
+    },
   },
   projectBg: {
     marginTop: "7rem",
     width: "50%",
+    [sizes.down("tablet")]: {
+      width: "100%",
+      marginTop: "3rem"
+    },
     "& p": {
       marginBottom: "5rem",
+      [sizes.down("tablet")]: {
+        marginBottom: "1rem"
+      },
     },
   },
   staticPreviewCtn: {

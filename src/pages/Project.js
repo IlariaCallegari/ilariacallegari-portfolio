@@ -10,7 +10,7 @@ import {
   StaticPreviewTwo,
 } from "../components/StaticPreviewImgs.js";
 
-function Project({ myProject, allProjects }) {
+function Project({ myProject, allProjects, outerWidth }) {
   const [nextProject, setNextProject] = useState({});
   const [previousProject, setPreviousProject] = useState({});
   const [ref, inView] = useInView();
@@ -76,11 +76,12 @@ function Project({ myProject, allProjects }) {
               <ExternalLink text="visit website" link={myProject.link} />
             )}
           </div>
-          {myProject.keyLessons && keyLessonsSession}
+          {outerWidth <= 768 ? null : myProject.keyLessons && keyLessonsSession}
         </div>
         <div className={projectBg}>
           <h3>Project Background</h3>
           <p>{myProject.projectBackground}</p>
+          {outerWidth <= 768 && myProject.keyLessons && keyLessonsSession}
           <div className={staticPreviewCtn}>
             <h3>Static Preview</h3>
             <StaticPreviewOne project={myProject.project} />

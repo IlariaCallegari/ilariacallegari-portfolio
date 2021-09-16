@@ -52,6 +52,7 @@ function App() {
                 <Project
                   allProjects={allProjects}
                   myProject={findProject(routeProps.match.params.project)}
+                  outerWidth={outerWidth}
                 />
               </Page>
             )}
