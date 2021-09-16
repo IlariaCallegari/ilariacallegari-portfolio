@@ -1,22 +1,10 @@
 import { NavLink } from "react-router-dom";
 import useStyles from "../styles/menuList-style.js";
+import links from "../utils/links";
 
 function MenuList({ isFooter }) {
   const { menuList, footLinks, navLinkDecor } = useStyles();
-  const links = [
-    {
-      name: "Home",
-      link: "/",
-    },
-    {
-      name: "Portfolio",
-      link: "/portfolio",
-    },
-    {
-      name: "Contact me",
-      link: "/contact-me",
-    },
-  ];
+
   return (
     <ul className={menuList}>
       {links.map((link) => {

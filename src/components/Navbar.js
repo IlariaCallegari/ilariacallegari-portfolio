@@ -28,14 +28,16 @@ function Navbar({ outerWidth }) {
     );
 
   const closeMenu = (
-    <IoMdClose size="30" color={colors.secondaryPink} onClick={toggleMenu} />
+    <>
+      <IoMdClose size="30" color={colors.secondaryPink} onClick={toggleMenu} />
+      <MobileMenu />
+    </>
   );
 
   return (
     <nav className={navbar}>
       <Logo src={logo} />
       {menuIsOpen ? closeMenu : hamMenu}
-      {menuIsOpen && <MobileMenu />}
     </nav>
   );
 }
