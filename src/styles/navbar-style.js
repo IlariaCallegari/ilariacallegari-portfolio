@@ -14,6 +14,7 @@ const useStyles = createUseStyles({
     },
     [sizes.down("mobileL")]: {
       alignItems: "flex-start",
+      position: "relative"
     },
   },
 });

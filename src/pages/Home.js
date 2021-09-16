@@ -12,7 +12,7 @@ function Home({ outerWidth }) {
   const { heroCtn, heroImg, heroHeading } = useStyles(inView);
   return (
     <React.Fragment>
-      <div className={heroCtn} ref={ref}>
+      <section className={heroCtn} ref={ref}>
         <img
           className={heroImg}
           src={mainImage}
@@ -24,7 +24,7 @@ function Home({ outerWidth }) {
             About Me
           </Link>
         </div>
-      </div>
+      </section>
       <About outerWidth={outerWidth} />
       <Technologies />
       <CallToAction />

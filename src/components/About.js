@@ -15,7 +15,7 @@ function Home({ outerWidth }) {
   );
 
   return (
-    <session className={aboutCtn} ref={ref}>
+    <section className={aboutCtn} ref={ref}>
       {outerWidth >= 950 || outerWidth <= 430 ? desktopImg : tabletImg}
       <div className={aboutDescrCtn}>
         <h2 id="about">About Me</h2>
@@ -31,7 +31,7 @@ function Home({ outerWidth }) {
         </article>
         <Button text="Go to portfolio" link="/portfolio" />
       </div>
-    </session>
+    </section>
   );
 }
 

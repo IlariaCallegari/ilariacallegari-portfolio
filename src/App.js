@@ -27,7 +27,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar outerWidth={outerWidth} />
+        <Navbar outerWidth={outerWidth}/>
         <Switch>
           <Route exact path="/">
             <Page>
