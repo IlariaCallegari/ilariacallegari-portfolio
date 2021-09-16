@@ -30,7 +30,7 @@ function Navbar({ outerWidth }) {
   const closeMenu = (
     <>
       <IoMdClose size="30" color={colors.secondaryPink} onClick={toggleMenu} />
-      <MobMenu />
+      <MobMenu toggleMenu={toggleMenu} />
     </>
   );
 

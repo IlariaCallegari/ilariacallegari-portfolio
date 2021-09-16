@@ -13,7 +13,7 @@ import {
 function Project({ myProject, allProjects }) {
   const [nextProject, setNextProject] = useState({});
   const [previousProject, setPreviousProject] = useState({});
-  const [ref1, inView1] = useInView();
+  const [ref, inView] = useInView();
 
   useEffect(() => {
     const idx = allProjects.indexOf(myProject);
@@ -31,16 +31,18 @@ function Project({ myProject, allProjects }) {
 
   const {
     projectCtn,
-    leftSide,
+    general,
     projectDescr,
     shortDescr,
+    projName,
     projectBg,
+    stackCtn,
     stack,
     lessons,
     staticPreviewCtn,
-  } = useStyles({ inView1 });
+  } = useStyles({ inView });
 
-  const keyLessonsSession = () => (
+  const keyLessonsSession = (
     <div className={lessons}>
       <h3>Key Lessons</h3>
       <p dangerouslySetInnerHTML={{ __html: myProject.keyLessons }}></p>
@@ -50,12 +52,14 @@ function Project({ myProject, allProjects }) {
   return (
     <div className={projectCtn}>
       <ProjectMainImg project={myProject.project} />
-      <article className={projectDescr} ref={ref1}>
-        <div className={leftSide}>
+      <article className={projectDescr} ref={ref}>
+        <div className={general}>
           <div className={shortDescr}>
-            <h2>{myProject.projectName}</h2>
-            <p>{myProject.shortDescription}</p>
-            <div>
+            <div className={projName}>
+              <h2>{myProject.projectName}</h2>
+              <p>{myProject.shortDescription}</p>
+            </div>
+            <div className={stackCtn}>
               <h3>Built with</h3>
               <ul className={stack}>
                 {myProject.stack.map((skill) => (
@@ -72,7 +76,7 @@ function Project({ myProject, allProjects }) {
               <ExternalLink text="visit website" link={myProject.link} />
             )}
           </div>
-          {myProject.keyLessons ? keyLessonsSession() : null}
+          {myProject.keyLessons && keyLessonsSession}
         </div>
         <div className={projectBg}>
           <h3>Project Background</h3>
