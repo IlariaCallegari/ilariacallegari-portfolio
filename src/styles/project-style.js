@@ -36,6 +36,7 @@ const useStyles = createUseStyles({
     },
     [sizes.down("mobileL")]: {
       flexDirection: "column",
+      margin: "2rem 10rem 0 0",
     },
     "& h2": {
       fontSize: "2.5rem",
