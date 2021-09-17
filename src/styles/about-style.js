@@ -8,6 +8,7 @@ const useStyles = createUseStyles({
     display: "flex",
     opacity: 0,
     animation: inView && "$fade-in 0.7s ease-in forwards",
+    alignItems: "center"
   }),
   img: {
     width: "40%",
@@ -17,7 +18,7 @@ const useStyles = createUseStyles({
     },
   },
   aboutDescrCtn: {
-    margin: "0 7rem",
+    margin: "0 4rem",
     borderTop: `2px solid ${colors.lightGrey}`,
     borderBottom: `2px solid ${colors.lightGrey}`,
     paddingBottom: "2.5rem",
