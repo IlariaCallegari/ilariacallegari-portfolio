@@ -50,7 +50,7 @@ const useStyles = createUseStyles({
   },
   techCtn: {
     display: "flex",
-    justifyContent: "space-around",
+    justifyContent: "flex-end",
     flexWrap: "wrap",
     width: "50%",
     paddingLeft: "2rem",

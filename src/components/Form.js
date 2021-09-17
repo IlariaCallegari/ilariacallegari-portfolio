@@ -82,6 +82,7 @@ function Form() {
               Message
             </label>
             <textarea
+              name="message"
               className={textArea}
               rows="7"
               placeholder="How can I help you?"

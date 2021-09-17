@@ -50,7 +50,7 @@ function Contact() {
               rel="noreferrer"
               href="https://www.linkedin.com/in/ilariacallegari/"
             >
-              <FaLinkedin size="30" />
+              <FaLinkedin size="30"/>
             </a>
             <a
               className={link}

@@ -1,11 +1,11 @@
 import { useState } from "react";
-import useFetch from "./useFetch";
+import emailjs from "emailjs-com";
+require("dotenv").config();
 
 function useForm(options) {
   const [data, setData] = useState(options?.initialValues || {});
   const [errors, setErrors] = useState({});
   const [resStatus, setResStatus] = useState(null);
-  const { fetchRoute } = useFetch();
 
   const handleChange = (key) => (e) => {
     //curried function
@@ -45,10 +45,22 @@ function useForm(options) {
       }
       setErrors({});
     }
-    fetchRoute(data).then(async (res) => {
-      setData(options?.initialValues);
-      await setResStatus(res.status);
-    });
+    emailjs
+      .sendForm(
+        `${process.env.REACT_APP_SERVICE_ID}`,
+        `${process.env.REACT_APP_TEMPLATE_ID}`,
+        e.target,
+        `${process.env.REACT_APP_USER_ID}`
+      )
+      .then(
+        (res) => {
+          setData(options?.initialValues);
+          setResStatus(res.status);
+        },
+        (err) => {
+          console.log(err.text);
+        }
+      );
   };
 
   return {
