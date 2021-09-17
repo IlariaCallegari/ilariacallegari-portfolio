@@ -7,8 +7,10 @@ const useStyles = createUseStyles({
     padding: "1rem 3rem",
     position: "absolute",
     zIndex: "100",
-    top: "3rem",
+    top: "4rem",
     right: 0,
+    width: 0,
+    animation: "$fade-in 0.7s ease-in forwards",
     "& ul": {
       marginTop: "1.5rem",
       "& li": {
@@ -21,9 +23,15 @@ const useStyles = createUseStyles({
           transition: "color 0.3s ease-in",
           "&:hover": {
             color: colors.primaryDarkGreen,
-          }
+          },
         },
       },
+    },
+  },
+  "@keyframes fade-in": {
+    "100%": {
+      opacity: 1,
+      width: "100%",
     },
   },
 });
