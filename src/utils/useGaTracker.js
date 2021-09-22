@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import  {useLocation}  from "react-router-dom";
 import ReactGA from "react-ga";
 require("dotenv").config();
 
@@ -10,8 +10,8 @@ const useGaTracker = () => {
   useEffect(() => {
     if (!window.location.href.includes("localhost")) {
       ReactGA.initialize(`${process.env.REACT_APP_GA}`);
+      setInitialized(true);
     }
-    setInitialized(true);
   }, []);
 
   useEffect(() => {

@@ -4,8 +4,10 @@ import Form from "../components/Form";
 import { useInView } from "react-intersection-observer";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiFiverr, SiUpwork } from "react-icons/si";
+import useGaTracker from "../utils/useGaTracker";
 
 function Contact() {
+  useGaTracker();
   const [ref, inView] = useInView();
   const { getInTouchCtn, headingCtn, heading, descriptionCtn, linkCtn, link } =
     useStyles(inView);

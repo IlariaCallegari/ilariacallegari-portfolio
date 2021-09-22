@@ -9,12 +9,14 @@ import {
   StaticPreviewOne,
   StaticPreviewTwo,
 } from "../components/StaticPreviewImgs.js";
+import useGaTracker from "../utils/useGaTracker.js";
 
 function Project({ myProject, allProjects, outerWidth }) {
   const [nextProject, setNextProject] = useState({});
   const [previousProject, setPreviousProject] = useState({});
   const [ref, inView] = useInView();
 
+  useGaTracker(); 
   useEffect(() => {
     const idx = allProjects.indexOf(myProject);
 

@@ -6,8 +6,10 @@ import About from "../components/About";
 import Technologies from "../components/Technologies";
 import CallToAction from "../components/CallToAction";
 import useStyles from "../styles/home-style";
+import useGaTracker from "../utils/useGaTracker";
 
 function Home({ outerWidth }) {
+  useGaTracker()
   const [ref, inView] = useInView();
   const { heroCtn, heroImg, heroHeading } = useStyles(inView);
   return (

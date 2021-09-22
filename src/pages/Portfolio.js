@@ -1,7 +1,9 @@
 import CallToAction from "../components/CallToAction";
 import ProjectPreview from "../components/ProjectPreview";
+import useGaTracker from "../utils/useGaTracker";
 
 function Portfolio({ allProjects, outerWidth }) {
+  useGaTracker()
   return (
     <>
       {allProjects.map((project) => (
