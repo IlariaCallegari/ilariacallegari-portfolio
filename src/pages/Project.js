@@ -63,7 +63,7 @@ function Project({ myProject, allProjects, outerWidth }) {
               <h3>Built with</h3>
               <ul className={stack}>
                 {myProject.stack.map((skill) => (
-                  <li>{skill}</li>
+                  <li key={skill}>{skill}</li>
                 ))}
               </ul>
             </div>

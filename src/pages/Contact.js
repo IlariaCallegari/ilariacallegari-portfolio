@@ -3,7 +3,7 @@ import useStyles from "../styles/contact-style";
 import Form from "../components/Form";
 import { useInView } from "react-intersection-observer";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { SiFiverr } from "react-icons/si";
+import { SiFiverr, SiUpwork } from "react-icons/si";
 
 function Contact() {
   const [ref, inView] = useInView();
@@ -60,6 +60,14 @@ function Contact() {
             >
               <SiFiverr size="30" />
             </a>
+            <a
+          className={link}
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.upwork.com/freelancers/~01e7f7fff79e457fdc"
+        >
+          <SiUpwork size="30" />
+        </a>
           </div>
         </div>
       </div>
