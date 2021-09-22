@@ -11,8 +11,8 @@ const useStyles = createUseStyles({
     alignItems: "center"
   }),
   img: {
-    width: "40%",
     height: "auto",
+    minWidth: "40%",
     [sizes.down("mobileL")]: {
       width: "100%",
     },

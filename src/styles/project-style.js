@@ -57,9 +57,6 @@ const useStyles = createUseStyles({
   },
   projName: {
     [sizes.down("tablet")]: {
-      width: "50%",
-    },
-    [sizes.down("mobileL")]: {
       width: "100%",
     },
   },
