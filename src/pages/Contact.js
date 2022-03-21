@@ -20,12 +20,9 @@ function Contact() {
         <div className={descriptionCtn}>
           <h3>🖥️ Companies</h3>
           <p>
-            I’m currently looking for a new role as a Front End Developer and I
-            am open to a wide range of opportunities. My preference would be to
-            find a position in a company in the Poole/Bournemouth (UK) area. But
-            I’m also happy to hear about remote opportunites in London or in the
-            UK. Check out my online profiles and get in touch using the form
-            down below.
+            Although I am not currently looking for any new oppurtunities, my
+            inbox is always open. Do drop me an email if you have any question
+            or would like to say "Hello!". I'll do my best to get back to you.
           </p>
           <h3>🛒 Private clients</h3>
           <p>
@@ -52,7 +49,7 @@ function Contact() {
               rel="noreferrer"
               href="https://www.linkedin.com/in/ilariacallegari/"
             >
-              <FaLinkedin size="30"/>
+              <FaLinkedin size="30" />
             </a>
             <a
               className={link}
@@ -63,13 +60,13 @@ function Contact() {
               <SiFiverr size="30" />
             </a>
             <a
-          className={link}
-          target="_blank"
-          rel="noreferrer"
-          href="https://www.upwork.com/freelancers/~01e7f7fff79e457fdc"
-        >
-          <SiUpwork size="30" />
-        </a>
+              className={link}
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.upwork.com/freelancers/~01e7f7fff79e457fdc"
+            >
+              <SiUpwork size="30" />
+            </a>
           </div>
         </div>
       </div>

@@ -21,7 +21,7 @@ function Home({ outerWidth }) {
           alt="woman sitting in meditation"
         />
         <div className={heroHeading}>
-          <h1>Hi, I am Ilaria, your next Front End Developer</h1>
+          <h1>Hi, I am Ilaria, a Creative Front End Developer</h1>
           <Link to="about" smooth={true}>
             About Me
           </Link>

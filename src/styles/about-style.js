@@ -8,7 +8,7 @@ const useStyles = createUseStyles({
     display: "flex",
     opacity: 0,
     animation: inView && "$fade-in 0.7s ease-in forwards",
-    alignItems: "center"
+    alignItems: "flex-start"
   }),
   img: {
     height: "auto",

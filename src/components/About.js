@@ -20,14 +20,27 @@ function Home({ outerWidth }) {
       <div className={aboutDescrCtn}>
         <h2 id="about">About Me</h2>
         <article>
-          Freelance Web Developer looking to join a joyful team as a Front End
-          Developer to work for a good cause. I invested the past two years to
-          retrain as a web developer, focussing my learning efforts on studying
-          the MERN stack. I chose React.js as my front-end framework of choice,
-          for its ability to create smooth user experiences by writing
-          easy-to-read and easily scalable code. Creating harmonious and
-          intuitive user experiences is my main goal, and I go the extra mile to
-          make my projects work well responsively.
+          <p>
+            Hi, I'm Ilaria, a Creative Front End Developer. In my previous life,
+            I was a Ph.D. student in Anthropology, passionate about human
+            languages and cultures. Two years ago, after suffering from a major
+            academic heartbreak, my passion shifted from human languages to
+            computer languages, and that's where my career as a web developer
+            begins.
+          </p>
+          <br />
+          <p>
+            Fast-forwarding to today, I build things for the web in
+            JavaScript, and I am a great fan of React.js. I've also dipped my
+            toes into Phyton, and I don't exclude building something with it one
+            day.
+          </p>
+          <br />
+          <p>
+            At present, I am using my skills to maintain the codebase and to
+            ideate, and build new products for a company that offers geospatial
+            solutions for the insurance industry, which is indeed very much fun.
+          </p>
         </article>
         <Button text="Go to portfolio" link="/portfolio" />
       </div>
