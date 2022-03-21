@@ -32,7 +32,7 @@ function Home({ outerWidth }) {
           <p>
             Fast-forwarding to today, I build things for the web in
             JavaScript, and I am a great fan of React.js. I've also dipped my
-            toes into Phyton, and I don't exclude building something with it one
+            toes into Python, and I don't exclude building something with it one
             day.
           </p>
           <br />
