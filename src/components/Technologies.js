@@ -1,11 +1,10 @@
 import useStyles from "../styles/technologies-style";
 import { useInView } from "react-intersection-observer";
-import ReactToolTip from "react-tooltip";
+// import ReactToolTip from "react-tooltip";
 import {
   FaReact,
   FaHtml5,
   FaCss3,
-  FaSass,
   FaWordpress,
   FaGitAlt,
   FaFigma,
@@ -13,6 +12,7 @@ import {
 } from "react-icons/fa";
 import {
   SiJavascript,
+  SiTypescript,
   SiAdobexd,
   SiMongodb,
   SiVisualstudiocode,
@@ -33,7 +33,7 @@ function Stack() {
             <FaHtml5 size="2rem" />
             <p>Html5</p>
           </div>
-          <ReactToolTip
+          {/* <ReactToolTip
             id="htmlTip"
             place="top"
             effect="float"
@@ -42,12 +42,12 @@ function Stack() {
           >
             Semantic markup. <br /> To give developers and browsers more details{" "}
             <br /> about the page structure.
-          </ReactToolTip>
+          </ReactToolTip> */}
           <div data-tip data-for="cssTip">
             <FaCss3 size="2rem" />
             <p>CSS3</p>
           </div>
-          <ReactToolTip
+          {/* <ReactToolTip
             id="cssTip"
             place="top"
             effect="float"
@@ -55,12 +55,12 @@ function Stack() {
             backgroundColor="#95BAB7"
           >
             To give users the best experience.
-          </ReactToolTip>
+          </ReactToolTip> */}
           <div data-tip data-for="JSTip">
             <SiJavascript size="2rem" />
             <p>JavaScript</p>
           </div>
-          <ReactToolTip
+          {/* <ReactToolTip
             id="JSTip"
             place="top"
             effect="float"
@@ -68,28 +68,26 @@ function Stack() {
             backgroundColor="#95BAB7"
           >
             I've spent quite some time <br /> building a strong foundation on
-            <br /> Vanilla JS. I prefer it, than using JQuery.
-          </ReactToolTip>
-          <div data-tip data-for="sassTip">
-            <FaSass size="2rem" />
-            <p>Sass</p>
+            <br /> Vanilla JS.
+          </ReactToolTip> */}
+          <div data-tip data-for="JSTip">
+            <SiTypescript size="2rem" />
+            <p>Typescript</p>
           </div>
-          <ReactToolTip
-            id="sassTip"
+          {/* <ReactToolTip
+            id="TSTip"
             place="top"
             effect="float"
             data-multiline
             backgroundColor="#95BAB7"
           >
-            When not using a JS framework, <br />I like to implement my own
-            styling <br />
-            by using SASS.
-          </ReactToolTip>
+            If not using JS, I'd be most likely <br /> be using Typescript
+          </ReactToolTip> */}
           <div data-tip data-for="reactTip">
             <FaReact size="2rem" />
             <p>ReactJS</p>
           </div>
-          <ReactToolTip
+          {/* <ReactToolTip
             id="reactTip"
             place="top"
             effect="float"
@@ -98,12 +96,12 @@ function Stack() {
           >
             React has quickly become my favourite <br /> library to create
             beautiful UI <br /> and smooth UX
-          </ReactToolTip>
+          </ReactToolTip> */}
           <div data-tip data-for="materialTip">
             <SiMaterialUi size="2rem" />
             <p>Material UI</p>
           </div>
-          <ReactToolTip
+          {/* <ReactToolTip
             id="materialTip"
             place="top"
             effect="float"
@@ -113,12 +111,12 @@ function Stack() {
             When in need of a UI component <br /> that might require a bit of
             configuration, <br />
             Material UI is my go to library.
-          </ReactToolTip>
+          </ReactToolTip> */}
           <div data-tip data-for="mongoTip">
             <SiMongodb size="2rem" />
             <p>MongoDB</p>
           </div>
-          <ReactToolTip
+          {/* <ReactToolTip
             id="mongoTip"
             data-multiline
             place="top"
@@ -127,12 +125,12 @@ function Stack() {
           >
             The DB I have use the most <br />
             when building full-stack apps.
-          </ReactToolTip>
+          </ReactToolTip> */}
           <div data-tip data-for="wordpressTip">
             <FaWordpress size="2rem" />
             <p>WordPress</p>
           </div>
-          <ReactToolTip
+          {/* <ReactToolTip
             id="wordpressTip"
             place="top"
             effect="float"
@@ -143,7 +141,7 @@ function Stack() {
             their websites with WP, <br /> to give them the opportunity <br />{" "}
             to make the best use of their website, <br /> without having to ask
             for my services.
-          </ReactToolTip>
+          </ReactToolTip> */}
         </div>
       </div>
       <div className={skillsCtn}>
@@ -153,7 +151,7 @@ function Stack() {
             <SiAdobexd size="2rem" />
             <p>AdobeXD</p>
           </div>
-          <ReactToolTip
+          {/* <ReactToolTip
             id="adobeTip"
             place="top"
             effect="float"
@@ -162,12 +160,12 @@ function Stack() {
           >
             When necessary, I like prototyping <br /> in AdobeXD or Figma. I
             especially like Figma, <br /> as it returns the perfect CSS code.
-          </ReactToolTip>
+          </ReactToolTip> */}
           <div data-tip data-for="figmaTip">
             <FaFigma size="2rem" />
             <p>Figma</p>
           </div>
-          <ReactToolTip
+          {/* <ReactToolTip
             id="figmaTip"
             place="top"
             effect="float"
@@ -176,7 +174,7 @@ function Stack() {
           >
             When necessary, I like prototyping <br /> in AdobeXD or Figma. I
             especially like Figma, <br /> as it returns the perfect CSS code.
-          </ReactToolTip>
+          </ReactToolTip> */}
         </div>
       </div>
       <div className={skillsCtn}>
@@ -186,7 +184,7 @@ function Stack() {
             <SiVisualstudiocode size="2rem" />
             <p>VSCode</p>
           </div>
-          <ReactToolTip
+          {/* <ReactToolTip
             id="VSCodeTip"
             place="top"
             effect="float"
@@ -194,12 +192,12 @@ function Stack() {
             data-multiline
           >
             My code editor of choice.
-          </ReactToolTip>
+          </ReactToolTip> */}
           <div data-tip data-for="gitTip">
             <FaGitAlt size="2rem" />
             <p>Git</p>
           </div>
-          <ReactToolTip
+          {/* <ReactToolTip
             id="gitTip"
             place="top"
             effect="float"
@@ -208,12 +206,12 @@ function Stack() {
           >
             Version Control. <br />
             The best way to manage my code.
-          </ReactToolTip>
+          </ReactToolTip> */}
           <div data-tip data-for="githubTip">
             <FaGithub size="2rem" />
             <p>GitHub</p>
           </div>
-          <ReactToolTip
+          {/* <ReactToolTip
             id="githubTip"
             place="top"
             effect="float"
@@ -221,7 +219,7 @@ function Stack() {
             data-multiline
           >
             Where I store all my projects.
-          </ReactToolTip>
+          </ReactToolTip> */}
         </div>
       </div>
     </section>

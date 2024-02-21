@@ -2,7 +2,6 @@ import Logo from "../components/Logo";
 import MenuList from "./MenuList";
 import useStyles from "../styles/footer-style";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { SiFiverr, SiUpwork } from "react-icons/si";
 import logo from "../assets/logo-white.svg";
 
 function Footer() {
@@ -27,22 +26,6 @@ function Footer() {
           href="https://www.linkedin.com/in/ilariacallegari/"
         >
           <FaLinkedin size="30" />
-        </a>
-        <a
-          className={link}
-          target="_blank"
-          rel="noreferrer"
-          href="https://www.fiverr.com/ilariacallegari/create-a-responsive-and-modern-website-for-your-business"
-        >
-          <SiFiverr size="30" />
-        </a>
-        <a
-          className={link}
-          target="_blank"
-          rel="noreferrer"
-          href="https://www.upwork.com/freelancers/~01e7f7fff79e457fdc"
-        >
-          <SiUpwork size="30" />
         </a>
       </div>
     </footer>

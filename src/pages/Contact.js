@@ -3,7 +3,6 @@ import useStyles from "../styles/contact-style";
 import Form from "../components/Form";
 import { useInView } from "react-intersection-observer";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { SiFiverr, SiUpwork } from "react-icons/si";
 import useGaTracker from "../utils/useGaTracker";
 
 function Contact() {
@@ -50,22 +49,6 @@ function Contact() {
               href="https://www.linkedin.com/in/ilariacallegari/"
             >
               <FaLinkedin size="30" />
-            </a>
-            <a
-              className={link}
-              target="_blank"
-              rel="noreferrer"
-              href="https://www.fiverr.com/ilariacallegari/create-a-responsive-and-modern-website-for-your-business"
-            >
-              <SiFiverr size="30" />
-            </a>
-            <a
-              className={link}
-              target="_blank"
-              rel="noreferrer"
-              href="https://www.upwork.com/freelancers/~01e7f7fff79e457fdc"
-            >
-              <SiUpwork size="30" />
             </a>
           </div>
         </div>

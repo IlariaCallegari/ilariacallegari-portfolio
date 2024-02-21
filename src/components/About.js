@@ -26,7 +26,7 @@ function Home({ outerWidth }) {
             languages and cultures. Two years ago, after suffering from a major
             academic heartbreak, my passion shifted from human languages to
             computer languages, and that's where my career as a web developer
-            begins.
+            began.
           </p>
           <br />
           <p>
